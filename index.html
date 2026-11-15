@@ -362,13 +362,13 @@ dialog.lb button{position:fixed;top:18px;right:18px;width:44px;height:44px;borde
           <li><span>Location</span>Angeles City, Pampanga</li>
           <li><span>Email</span><div><a href="mailto:cuisonyoj@gmail.com">cuisonyoj@gmail.com</a><button class="copy" data-copy="cuisonyoj@gmail.com">Copy</button></div></li>
           <li><span>Mobile</span><div><a href="tel:+639470330275">0947 033 0275</a><button class="copy" data-copy="09470330275">Copy</button></div></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yojcuison">in/yojcuison</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yoj-cuison-584b2b377">in/yoj-cuison</a></li>
           <li><span>GitHub</span><a href="https://github.com/YjoNosiuc">YjoNosiuc</a></li>
         </ul>
       </aside>
     </div>
     <div class="stats">
-      <div class="stat reveal"><b>5</b><span>web systems built in school and personal projects</span></div>
+      <div class="stat reveal"><b>6</b><span>web systems built in school and personal projects</span></div>
       <div class="stat reveal"><b>IEEE</b><span>capstone paper accepted at ITIS 2026</span></div>
       <div class="stat reveal"><b>E2E</b><span>automated testing with Playwright and PHPUnit</span></div>
       <div class="stat reveal"><b>2027</b><span>expected graduation</span></div>
@@ -470,6 +470,44 @@ dialog.lb button{position:fixed;top:18px;right:18px;width:44px;height:44px;borde
               <h4>My role</h4><p>Full-stack developer in a team of four, working on request flows, approvals and document generation.</p>
               <h4>Recognition</h4><p>Endorsed for final defense in September 2026, and our paper was accepted at IEEE ITIS 2026, a Scopus-indexed conference.</p>
               <h4>What I learned</h4><p>How to split work across a team, keep one codebase consistent, and explain a system clearly in a research paper.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- GANAP PH -->
+      <article class="card proj reveal" data-gallery id="p-ganap">
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>ganap.ph / events</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/gp-1.webp" alt="GANAP PH community events page with live slot availability and register buttons" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="GANAP PH screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/gp-1.webp" data-cap="Residents browse barangay events with live slot counts" data-alt="GANAP PH community events page with live slot availability and register buttons"><img src="assets/shots/gp-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/gp-2.webp" data-cap="Admin dashboard: registrations, revenue and slot utilization" data-alt="GANAP PH admin dashboard with registration stats, slot utilization chart and daily registrations"><img src="assets/shots/gp-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/gp-3.webp" data-cap="Event management with fees, slots and publish status" data-alt="GANAP PH admin events table with dates, fees, slots and status"><img src="assets/shots/gp-3.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/gp-4.webp" data-cap="Super admin: multiple barangays on one platform" data-alt="GANAP PH super admin dashboard listing barangays and recent users"><img src="assets/shots/gp-4.webp" alt="" loading="lazy"></button>
+          </div>
+          <p class="caption">Residents browse barangay events with live slot counts</p>
+        </div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">Team, full-stack and integrations</span><span class="badge">SIA final project</span><span class="badge">Playwright</span></div>
+          <h3>GANAP PH</h3>
+          <p class="what">Event registration system for barangays</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Barangay events are usually announced on paper or social media, with no easy way for residents to sign up or for officials to control slots.</dd></div>
+            <div><dt>What it does</dt><dd>Residents browse barangay events and register online. Remaining slots update in real time, paid events go through online checkout, each registration gets a QR code for check-in, and automations handle follow-up tasks.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Laravel</span><span>Vue</span><span>Inertia.js</span><span>Laravel Echo</span><span>Stripe</span><span>Make.com</span><span>Playwright</span></dd></div>
+          </dl>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>My role</h4><p>Full-stack developer on the team, and I also handled the integrations: Stripe payments, real-time updates and Make.com automations.</p>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Four roles: super admin across barangays, barangay admin, staff for QR check-in, and residents.</li>
+                <li>Stripe confirms payments automatically, so admins never mark them by hand.</li>
+                <li>A dashboard with registrations, revenue, slot utilization and daily sign-ups.</li>
+                <li>End-to-end tests with Playwright for the main flows.</li>
+              </ul>
+              <h4>What I learned</h4><p>Integrations taught me to trust the payment provider's confirmation rather than the user's word, and to test complete flows end to end, not just single functions.</p>
             </div>
           </details>
         </div>
