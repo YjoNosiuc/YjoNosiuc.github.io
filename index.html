@@ -1,605 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Yoj T. Cuison — BSIT Student, Athlete &amp; Developer | CV &amp; Portfolio</title>
-<meta name="description" content="CV and portfolio of Yoj T. Cuison, 4th-year BSIT student, varsity athlete, and licensed real estate salesperson at Angeles University Foundation. Open to Web Development, Software QA, and Systems internships.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoj T. Cuison | BSIT Student, Developer &amp; Athlete</title>
+<meta name="description" content="Portfolio of Yoj T. Cuison, 4th-year BSIT student at Angeles University Foundation: full-stack web systems, software testing, and AI and prompt engineering. Open to internship 2026–2027.">
+<meta property="og:title" content="Yoj T. Cuison | Portfolio">
+<meta property="og:description" content="BSIT student, varsity athlete and licensed real estate salesperson building web systems and learning AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700;125,800;125,900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#e9edf2;--tile:#ffffff;--tile-2:#f3f5f8;--tile-3:#e8ecf2;--ink:#0d1016;--muted:#5a6271;--line:#dce1e9;
-  --accent:#ff5a1f;--accent-soft:#ffe6dc;--accent-ink:#ffffff;--dark:#0d1016;--dark-ink:#f2f4f7;--ok:#1fa463;--ok-soft:#dcf5e8;
-  --f:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;--fm:"Geist Mono",ui-monospace,"SFMono-Regular",monospace;
-  --r:24px;--ease:cubic-bezier(.16,1,.3,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --bg:#f6f5f1;--bg2:#efede6;--card:#ffffff;--ink:#0d1222;--ink2:#2a3042;--muted:#5b6274;--dim:#8a90a0;
+  --line:#e3e0d7;--line2:#cfcbc0;--accent:#2f52d4;--accent-soft:#e8edff;--accent-line:#c9d4ff;--ok:#1f7a4d;
+  --shadow:0 1px 2px rgba(13,18,34,.04),0 8px 24px -12px rgba(13,18,34,.12);
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --display:Archivo,"Arial Black",system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0d11;--tile:#15181e;--tile-2:#1c2028;--tile-3:#232834;--ink:#eef1f5;--muted:#9aa2b0;--line:#272c36;--accent-soft:#3a1f14;--dark:#eef1f5;--dark-ink:#0b0d11;--ok:#3fd68a;--ok-soft:#133526}}
-:root[data-theme="dark"]{--bg:#0b0d11;--tile:#15181e;--tile-2:#1c2028;--tile-3:#232834;--ink:#eef1f5;--muted:#9aa2b0;--line:#272c36;--accent-soft:#3a1f14;--dark:#eef1f5;--dark-ink:#0b0d11;--ok:#3fd68a;--ok-soft:#133526}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:calc(88px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:inherit}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.65 "Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(60% 50% at 85% 0%,rgba(143,180,255,.28),transparent 70%),radial-gradient(50% 40% at 0% 30%,rgba(255,214,170,.18),transparent 70%),
+  radial-gradient(circle,rgba(13,18,34,.07) 1px,transparent 1.2px) 0 0/26px 26px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:#fff}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
-.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
-.skip{position:absolute;left:-999px;top:.8rem;z-index:30;background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:10px}
-.skip:focus{left:1rem}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:12px}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 32px}
+.display{font-family:var(--display);font-stretch:125%;font-weight:800;letter-spacing:-.025em;line-height:.95}
+.mono{font-family:var(--mono)}
+#fluid{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;pointer-events:none}
+.cursor{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--ink);z-index:150;pointer-events:none;opacity:0;border:1px solid transparent;transition:width .25s,height .25s,background .25s,border-color .25s,opacity .2s}
+.cursor.big{width:50px;height:50px;background:rgba(47,82,212,.06);border-color:var(--accent)}
+@media (hover:none){.cursor{display:none}}
+.ripple{position:fixed;z-index:150;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;border:1.5px solid var(--ink);pointer-events:none;animation:rip .7s ease-out forwards}
+.ripple.r2{border-color:var(--accent);animation-delay:.08s;opacity:0}
+@keyframes rip{0%{transform:scale(1);opacity:.9}100%{transform:scale(7);opacity:0}}
 
-/* nav */
-.bar{position:sticky;top:0;z-index:20;padding-block:.8rem}
-.bar-in{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:color-mix(in srgb,var(--tile) 78%,transparent);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid var(--line);border-radius:99px;padding:.45rem .45rem .45rem 1.2rem}
-.logo{font-weight:700;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
-.bar nav{display:flex;gap:.15rem}
-.bar nav a{text-decoration:none;font-size:.9rem;color:var(--muted);padding:.45rem .8rem;border-radius:99px;transition:background .2s,color .2s}
-.bar nav a:hover,.bar nav a.on{background:var(--tile-2);color:var(--ink)}
-.bar-actions{display:flex;gap:.4rem;align-items:center}
-.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--tile);color:var(--ink);display:grid;place-items:center;cursor:pointer}
-.icon-btn svg{width:18px;height:18px}
-@media (max-width:900px){.bar nav{display:none}}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 .92rem var(--f);padding:.7rem 1.15rem;border-radius:99px;background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--spring);white-space:nowrap}
-.btn:hover{transform:scale(1.04)}
-.btn:active{transform:scale(.98)}
-.btn.dark{background:var(--dark);color:var(--dark-ink)}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.btn svg{width:16px;height:16px}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:60;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+header.scrolled{background:rgba(246,245,241,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 32px;max-width:1440px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--ink);color:#fff;font:800 13px var(--display);font-stretch:125%}
+.nav{display:flex;gap:4px;list-style:none}
+.nav a{display:block;padding:8px 12px;border-radius:8px;font-size:14.5px;color:var(--muted);font-weight:500;transition:color .2s,background .2s}
+.nav a:hover,.nav a.on{color:var(--ink);background:rgba(13,18,34,.05)}
+.hdr-r{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;height:44px;padding:0 18px;border-radius:10px;font:600 14.5px "Space Grotesk",system-ui,sans-serif;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s;white-space:nowrap}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(13,18,34,.5)}
+.btn-line{background:rgba(255,255,255,.7);border-color:var(--line2);color:var(--ink)}
+.btn-line:hover{border-color:var(--ink);background:#fff}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;border-radius:10px;cursor:pointer;color:var(--ink)}
+.burger{display:block;width:22px;height:10px;margin:auto;position:relative}
+.burger:before,.burger:after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .3s,top .3s}
+.burger:before{top:0}.burger:after{top:9px}
+.open .burger:before{top:4px;transform:rotate(45deg)}.open .burger:after{top:4px;transform:rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:55;background:rgba(246,245,241,.97);display:flex;align-items:center;padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .3s}
+.mmenu.show{opacity:1;pointer-events:auto}
+.mmenu ol{list-style:none;counter-reset:m}
+.mmenu li{counter-increment:m}
+.mmenu a{display:flex;align-items:baseline;gap:14px;font:800 clamp(30px,8vw,56px)/1.25 var(--display);font-stretch:125%;color:var(--ink)}
+.mmenu a:before{content:"0" counter(m);font:400 13px var(--mono);color:var(--dim)}
 
-/* tiles */
-.tile{background:var(--tile);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem;position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
-.tile.lift:hover{transform:translateY(-3px);box-shadow:0 22px 44px -26px rgb(13 16 22 / .38)}
-.tile::after{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 8%,transparent),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
-.tile:hover::after{opacity:1}
-.label{font:500 .78rem var(--fm);color:var(--muted);margin:0 0 .6rem}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;height:36px;padding:0 14px 0 12px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.75);font-size:13.5px;font-weight:500}
+.status i{width:8px;height:8px;border-radius:50%;background:#22a565;box-shadow:0 0 0 4px rgba(34,165,101,.15);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(34,165,101,.05)}}
+.hero .hi{margin-top:26px;font-size:clamp(18px,2vw,22px);color:var(--muted);font-weight:500}
+.hero h1{font-size:clamp(64px,11.5vw,156px);margin:4px 0 16px}
+.hero h1 span{display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2px var(--ink)}
+.role{font-size:clamp(18px,2.1vw,23px);color:var(--muted);font-weight:500;min-height:1.6em}
+.role b{color:var(--ink);font-weight:600}
+.typed:after{content:"";display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-2px;background:var(--accent);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{max-width:600px;margin-top:22px;color:var(--ink2);font-size:17px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.idcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.idcard:before{content:"";position:absolute;inset:0 0 auto 0;height:96px;background:linear-gradient(120deg,#e8edff,#f3efe4)}
+.avatar{position:relative;width:84px;height:84px;border-radius:22px;background:var(--ink);color:#fff;display:grid;place-items:center;font:900 28px var(--display);font-stretch:125%;margin-top:22px;border:4px solid #fff;box-shadow:var(--shadow)}
+.idcard h2{font:700 21px "Space Grotesk",system-ui,sans-serif;margin-top:14px}
+.idcard .sub{color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:12.5px;padding:4px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--ink2)}
+.contact-list{list-style:none;margin-top:18px;border-top:1px solid var(--line)}
+.contact-list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.contact-list span{color:var(--dim);font:400 12px var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.contact-list a{font-weight:500}
+.contact-list a:hover{color:var(--accent)}
+.copy{background:none;border:1px solid var(--line);border-radius:6px;font:500 11.5px var(--mono);color:var(--muted);padding:3px 7px;cursor:pointer;margin-left:8px}
+.copy:hover{border-color:var(--ink);color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:64px}
+.stat{background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.stat b{display:block;font:800 34px/1 var(--display);font-stretch:125%;letter-spacing:-.02em}
+.stat span{display:block;margin-top:8px;color:var(--muted);font-size:13.5px;line-height:1.45}
 
-/* hero bento */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(118px,auto);gap:.9rem;margin-top:.6rem}
-.hero-t{grid-column:span 4;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;min-height:380px}
-.hero-t h1{font-size:clamp(3rem,1.3rem + 6.6vw,7.2rem);line-height:.9;letter-spacing:-.06em;margin:0;font-weight:700}
-.hero-t h1 small{display:block;font-size:.2em;letter-spacing:-.01em;font-weight:500;color:var(--muted);margin-top:.9rem;line-height:1.3}
-.hero-t p{font-size:clamp(1.05rem,1rem + .4vw,1.28rem);max-width:44ch;margin:1.1rem 0 0;color:var(--muted)}
-.hero-t .row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
-.id{grid-column:span 2;grid-row:span 2;background:var(--dark);color:var(--dark-ink);display:flex;flex-direction:column;justify-content:space-between;border-color:var(--dark)}
-.mono-tile{flex:1;border-radius:18px;display:grid;place-items:center;margin-bottom:1rem;min-height:210px;position:relative;background:radial-gradient(circle at 30% 20%,color-mix(in srgb,var(--accent) 55%,transparent),transparent 55%),radial-gradient(circle at 80% 90%,color-mix(in srgb,var(--dark-ink) 14%,transparent),transparent 50%)}
-.mono-tile b{font-size:clamp(4rem,3rem + 3vw,6rem);font-weight:700;letter-spacing:-.07em;line-height:1}
-.open{display:flex;align-items:center;gap:.55rem;font-size:.92rem}
-.open::before{content:"";width:9px;height:9px;border-radius:50%;background:#35d07f;box-shadow:0 0 0 4px rgb(53 208 127 / .22);animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 7px rgb(53 208 127 / .05)}}
-.id .roles{font-size:.85rem;opacity:.7;margin:.35rem 0 0}
-.contact{grid-column:span 3}
-.contact dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.1rem;margin:0;font-size:.97rem}
-.contact dt{font:.78rem var(--fm);color:var(--muted);padding-top:.18rem}
-.contact dd{margin:0;overflow-wrap:anywhere}
-.contact a{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
-.contact a:hover{color:var(--accent);border-bottom-color:currentColor}
-.copy{margin-left:.4rem;font:500 .72rem var(--fm);color:var(--muted);background:var(--tile-2);border:1px solid var(--line);border-radius:99px;padding:.1rem .5rem;cursor:pointer;vertical-align:1px}
-.copy:hover{color:var(--ink)}
-.stat{grid-column:span 1;display:flex;flex-direction:column;justify-content:space-between;gap:.6rem}
-.stat b{font-size:clamp(2rem,1.4rem + 1.8vw,2.9rem);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
-.stat span{font-size:.82rem;color:var(--muted);line-height:1.35}
-.stat.hot{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.stat.hot span{color:inherit;opacity:.88}
-@media (max-width:980px){.bento{grid-template-columns:repeat(4,1fr)}.hero-t{grid-column:span 4}.id{grid-column:span 2;grid-row:span 1}.contact{grid-column:span 2}.stat{grid-column:span 2}}
-@media (max-width:600px){.bento{grid-template-columns:1fr 1fr}.hero-t,.contact,.id{grid-column:span 2}.stat{grid-column:span 1}.hero-t{min-height:0}}
-
-section{padding-block:clamp(3.5rem,8vw,6.5rem)}
-.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:1.6rem;flex-wrap:wrap}
-.head h2{font-size:clamp(2.2rem,1.4rem + 3vw,4rem);letter-spacing:-.05em;line-height:.95;margin:0}
-.head p{margin:0;color:var(--muted);max-width:44ch}
+/* sections */
+section{position:relative;padding:110px 0}
+.sec-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-bottom:52px}
+.sec-head .k{font:500 13px var(--mono);color:var(--accent);display:block;margin-bottom:12px}
+.sec-head h2{font-size:clamp(42px,6.5vw,82px)}
+.sec-head p{max-width:440px;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
 
 /* about */
-.about{display:grid;grid-template-columns:1.5fr 1fr;gap:.9rem}
-.about .tile p{margin:0 0 1rem;font-size:1.08rem}
-.about .tile p:last-child{margin-bottom:0}
-.looking{display:flex;flex-direction:column;gap:.9rem}
-.looking ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
-.looking li{display:flex;align-items:center;gap:.7rem;font-weight:600;padding:.75rem .9rem;background:var(--tile-2);border-radius:14px;border:1px solid var(--line)}
-.looking li i{width:28px;height:28px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-style:normal}
-.looking li i svg{width:16px;height:16px}
-.looking small{color:var(--muted)}
-@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+.about .card{padding:34px}
+.about p{color:var(--ink2);font-size:16.5px}
+.about p+p{margin-top:14px}
+.look h3{font:500 13px var(--mono);color:var(--accent);margin-bottom:16px}
+.look ul{list-style:none;display:grid;gap:10px}
+.look li{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;font-weight:600;background:var(--bg)}
+.look li svg{width:20px;height:20px;color:var(--accent);flex:none}
+.look p{margin-top:16px;font-size:14.5px;color:var(--muted)}
 
 /* projects */
-.pgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:.9rem}
-.p{grid-column:span 3;display:flex;flex-direction:column}
-.p.wide{grid-column:span 6;display:grid;grid-template-columns:1fr 1.1fr;gap:1.8rem;align-items:stretch}
-.p.wide.flip{grid-template-columns:1.1fr 1fr}
-.p.wide.flip .ill{order:-1}
-@media (max-width:900px){.p{grid-column:span 6}.p.wide,.p.wide.flip{grid-template-columns:1fr}.p.wide.flip .ill{order:0}}
-.chipline{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
-.chip{font:500 .74rem var(--fm);padding:.25rem .6rem;border-radius:99px;background:var(--tile-2);border:1px solid var(--line)}
-.chip.ok{background:var(--ok-soft);border-color:color-mix(in srgb,var(--ok) 40%,var(--line));color:color-mix(in srgb,var(--ok) 70%,var(--ink))}
-.chip.role{background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 35%,var(--line));color:color-mix(in srgb,var(--accent) 75%,var(--ink))}
-.p h3{font-size:clamp(1.7rem,1.4rem + 1vw,2.2rem);letter-spacing:-.045em;margin:0;line-height:1.05}
-.p .sub{color:var(--muted);margin:.35rem 0 1.1rem}
-.facts{display:grid;gap:.7rem;margin:0;font-size:.95rem}
-.facts div{border-top:1px solid var(--line);padding-top:.6rem}
-.facts dt{font:.74rem var(--fm);color:var(--muted)}
-.facts dd{margin:.12rem 0 0}
-.stack{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.3rem}
-.stack span{font:500 .78rem var(--fm);padding:.2rem .55rem;border-radius:6px;background:var(--tile-2);border:1px solid var(--line)}
+.projects{display:grid;gap:28px}
+.proj{display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden}
+.proj:nth-child(even){grid-template-columns:.85fr 1.15fr}
+.proj:nth-child(even) .gallery{order:2}
+.gallery{background:linear-gradient(160deg,#eef1fb,#f5f2ea);padding:30px;display:flex;flex-direction:column;gap:14px;border-right:1px solid var(--line)}
+.proj:nth-child(even) .gallery{border-right:0;border-left:1px solid var(--line)}
+.frame{border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line2);box-shadow:0 20px 40px -24px rgba(13,18,34,.35)}
+.frame .tb{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:#f3f2ee;border-bottom:1px solid var(--line)}
+.frame .tb i{width:9px;height:9px;border-radius:50%;background:#d7d4cb}
+.frame .tb em{font:400 11.5px var(--mono);font-style:normal;color:var(--dim);margin-left:10px}
+.frame button.shot{display:block;width:100%;border:0;padding:0;background:none;cursor:zoom-in}
+.frame img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.thumbs button{border:1.5px solid transparent;border-radius:8px;overflow:hidden;padding:0;background:#fff;cursor:pointer;opacity:.62;transition:opacity .2s,border-color .2s}
+.thumbs button:hover{opacity:1}
+.thumbs button[aria-pressed=true]{opacity:1;border-color:var(--ink)}
+.thumbs img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.caption{font-size:13.5px;color:var(--muted);min-height:1.5em}
+.pbody{padding:36px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font:500 12px var(--mono);padding:5px 10px;border-radius:7px;background:var(--bg);border:1px solid var(--line);color:var(--ink2)}
+.badge.hl{background:var(--accent-soft);border-color:var(--accent-line);color:var(--accent)}
+.pbody h3{font:800 clamp(30px,3.4vw,42px)/1 var(--display);font-stretch:125%;letter-spacing:-.02em;margin:18px 0 8px}
+.pbody .what{color:var(--muted);font-size:15px}
+.pbody dl{margin-top:22px;display:grid;gap:14px}
+.pbody dt{font:500 12px var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.pbody dd{color:var(--ink2);font-size:15px}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font-size:12.5px;padding:3px 9px;border-radius:999px;border:1px solid var(--line2);color:var(--ink2)}
+details.case{margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+details.case summary{display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;list-style:none;min-height:32px}
+details.case summary::-webkit-details-marker{display:none}
+details.case summary svg{width:16px;height:16px;transition:transform .25s}
+details.case[open] summary svg{transform:rotate(45deg)}
+details.case .cbody{margin-top:12px;color:var(--ink2);font-size:15px}
+details.case h4{font:500 12px var(--mono);color:var(--accent);margin:14px 0 4px;text-transform:uppercase;letter-spacing:.06em}
+details.case ul{padding-left:18px}
+details.case li+li{margin-top:4px}
+.pending-shots{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:14px;background:repeating-linear-gradient(135deg,#faf9f6 0 12px,#f4f2ec 12px 24px)}
+.pending-shots b{display:block;font:800 22px var(--display);font-stretch:125%;color:var(--ink);margin-bottom:6px}
 
-/* illustrations (interface concepts, not screenshots) */
-.ill{border-radius:18px;background:var(--tile-2);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;min-height:300px;position:relative}
-.p:not(.wide) .ill{margin-bottom:1.3rem;min-height:250px}
-.ill .chrome{height:30px;border-bottom:1px solid var(--line);display:flex;gap:6px;align-items:center;padding:0 12px;background:var(--tile)}
-.ill .chrome i{width:8px;height:8px;border-radius:50%;background:var(--line)}
-.ill .chrome span{margin-left:auto;font:.68rem var(--fm);color:var(--muted)}
-.ill .body{flex:1;padding:14px;display:flex;flex-direction:column;gap:10px;font-size:.78rem}
-.ill .cap{position:absolute;right:10px;bottom:8px;font:.62rem var(--fm);color:var(--muted);opacity:.8}
-.card{background:var(--tile);border:1px solid var(--line);border-radius:10px;padding:10px}
-.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.pipe div{padding:8px 6px;border-radius:8px;background:var(--tile);border:1px solid var(--line);text-align:center;font-size:.68rem;font-weight:600;color:var(--muted)}
-.pipe div.done{background:var(--ok-soft);color:color-mix(in srgb,var(--ok) 75%,var(--ink));border-color:transparent}
-.pipe div.now{background:var(--accent);color:var(--accent-ink);border-color:transparent}
-.rows{display:grid;gap:6px}
-.rows .r{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;background:var(--tile);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
-.rows .r b{font-weight:600;font-size:.76rem}
-.rows .r em{font-style:normal;font:.64rem var(--fm);padding:2px 7px;border-radius:99px;background:var(--tile-3);color:var(--muted)}
-.rows .r em.g{background:var(--ok-soft);color:color-mix(in srgb,var(--ok) 75%,var(--ink))}
-.rows .r em.o{background:var(--accent-soft);color:color-mix(in srgb,var(--accent) 80%,var(--ink))}
-.bar-line{height:6px;background:var(--tile-3);border-radius:99px;overflow:hidden}
-.bar-line i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .6s var(--ease)}
-.events{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.ev{background:var(--tile);border:1px solid var(--line);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px}
-.ev .thumb{height:46px;border-radius:7px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 50%,var(--tile)),color-mix(in srgb,var(--accent) 12%,var(--tile)))}
-.ev:nth-child(2) .thumb{background:linear-gradient(135deg,color-mix(in srgb,var(--ok) 45%,var(--tile)),color-mix(in srgb,var(--ok) 10%,var(--tile)))}
-.ev b{font-size:.76rem}
-.ev .meta{display:flex;justify-content:space-between;font:.64rem var(--fm);color:var(--muted)}
-.live{display:inline-flex;align-items:center;gap:5px;font:.64rem var(--fm);color:var(--ok)}
-.live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ok);animation:blink 1.4s infinite}
-@keyframes blink{50%{opacity:.2}}
-.pay{display:flex;justify-content:space-between;align-items:center}
-.pay .btnm{background:var(--dark);color:var(--dark-ink);border-radius:7px;padding:6px 10px;font-weight:600;font-size:.7rem}
-.timeline{display:grid;gap:0;padding-left:6px}
-.timeline div{position:relative;padding:0 0 12px 18px;border-left:2px solid var(--line);font-size:.74rem}
-.timeline div:last-child{border-left-color:transparent;padding-bottom:0}
-.timeline div::before{content:"";position:absolute;left:-7px;top:1px;width:12px;height:12px;border-radius:50%;background:var(--tile);border:2px solid var(--line)}
-.timeline div.done::before{background:var(--ok);border-color:var(--ok)}
-.timeline div.now::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
-.timeline small{display:block;color:var(--muted);font:.64rem var(--fm)}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.kpis div{background:var(--tile);border:1px solid var(--line);border-radius:8px;padding:8px}
-.kpis small{display:block;color:var(--muted);font:.62rem var(--fm)}
-.kpis b{font-size:1.05rem;letter-spacing:-.03em}
+/* AI */
+.ai{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ai-hero{grid-column:1/-1;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:40px;background:var(--ink);color:#f4f6fb;border-color:var(--ink);overflow:hidden;position:relative}
+.ai-hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 60px rgba(255,255,255,.03),0 0 0 120px rgba(255,255,255,.02)}
+.ai-hero .k{font:500 13px var(--mono);color:#8fb4ff}
+.ai-hero h3{font:800 clamp(28px,3.6vw,44px)/1.02 var(--display);font-stretch:125%;margin:12px 0 14px;letter-spacing:-.02em}
+.ai-hero p{color:#c3c9d8}
+.ai-hero .btn-w{background:#fff;color:var(--ink);margin-top:24px}
+.ai-hero .btn-w:hover{transform:translateY(-2px)}
+.ai-list{list-style:none;display:grid;gap:10px;position:relative;z-index:1}
+.ai-list li{display:flex;justify-content:space-between;gap:12px;padding:13px 16px;border:1px solid rgba(255,255,255,.14);border-radius:12px;font-size:14.5px;background:rgba(255,255,255,.03)}
+.ai-list li b{font-weight:600}
+.ai-list li span{color:#8fb4ff;font:400 12.5px var(--mono);white-space:nowrap}
+.ai .card:not(.ai-hero){padding:28px}
+.ai h4{font:700 19px "Space Grotesk",system-ui,sans-serif;margin:10px 0 6px}
+.ai .card p{color:var(--muted);font-size:15px}
+.ai .num{font:500 12.5px var(--mono);color:var(--accent)}
+
+/* approach */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{padding:26px;counter-increment:s}
+.step:before{content:"0" counter(s);font:500 13px var(--mono);color:var(--accent)}
+.step h3{font:700 18px "Space Grotesk",system-ui,sans-serif;margin:14px 0 6px}
+.step p{color:var(--muted);font-size:14.5px}
 
 /* skills */
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
-@media (max-width:900px){.sgrid{grid-template-columns:1fr}}
-.sgrid .tile h3{margin:0 0 .3rem;font-size:1.2rem;letter-spacing:-.02em}
-.sgrid .tile > p{margin:0 0 1rem;color:var(--muted);font-size:.9rem}
-.sgrid .chip{font-size:.8rem;padding:.35rem .7rem}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skill{padding:26px}
+.skill h3{font:700 18px "Space Grotesk",system-ui,sans-serif}
+.skill .sub{color:var(--dim);font-size:13.5px;margin:2px 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:13px;padding:5px 11px;border-radius:8px;background:var(--bg);border:1px solid var(--line);color:var(--ink2);transition:border-color .2s,transform .2s}
+.chip:hover{border-color:var(--ink);transform:translateY(-1px)}
+.skill.new{border-color:var(--accent-line);background:linear-gradient(180deg,#f6f8ff,#fff)}
+.skill.new .chip{background:#fff;border-color:var(--accent-line)}
+.newtag{display:inline-block;font:500 11px var(--mono);color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:5px;margin-left:8px;vertical-align:3px}
 
 /* experience */
-.xp{display:grid;gap:.9rem}
-.xp .tile{display:grid;grid-template-columns:220px 1fr;gap:1.5rem}
-@media (max-width:700px){.xp .tile{grid-template-columns:1fr;gap:.4rem}}
-.xp .when{font:.82rem var(--fm);color:var(--muted)}
-.xp .when b{display:block;font:600 .78rem var(--f);color:var(--accent);margin-top:.3rem}
-.xp h3{margin:0;font-size:1.35rem;letter-spacing:-.03em}
-.xp .org{color:var(--muted);margin:.1rem 0 .7rem}
-.xp ul{margin:0;padding-left:1.1rem}
-.xp li{margin:.25rem 0}
+.xp{display:grid;gap:18px}
+.job{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:32px}
+.job .n{font:500 13px var(--mono);color:var(--dim)}
+.job .when{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font:400 12.5px var(--mono);color:var(--muted);padding:5px 10px;border:1px solid var(--line);border-radius:7px;background:var(--bg)}
+.job .when:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.job .kind{display:block;margin-top:8px;font-size:13px;color:var(--dim)}
+.job h3{font:700 21px/1.3 "Space Grotesk",system-ui,sans-serif}
+.job .org{color:var(--muted);font-size:15px;margin-top:2px}
+.job ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.job li{position:relative;padding-left:22px;color:var(--ink2)}
+.job li:before{content:"";position:absolute;left:0;top:12px;width:10px;height:1.5px;background:var(--dim)}
 
-/* more */
-.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
-.trio .span2{grid-column:span 2}
-@media (max-width:900px){.trio{grid-template-columns:1fr}.trio .span2{grid-column:auto}}
-.trio h3{margin:0 0 .3rem;font-size:1.35rem;letter-spacing:-.03em}
-.trio p{margin:.2rem 0;color:var(--muted);font-size:.96rem}
-.edu-top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:start}
-.edu-badge{font:500 .78rem var(--fm);padding:.3rem .7rem;border-radius:99px;background:var(--accent-soft);color:color-mix(in srgb,var(--accent) 80%,var(--ink))}
-.courses{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1rem}
-.list{list-style:none;padding:0;margin:0;display:grid;gap:.6rem;font-size:.96rem}
-.list li{padding-left:1.2rem;position:relative}
-.list li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
-.list li small{display:block;color:var(--muted);font-size:.84rem}
-.hob{display:flex;flex-wrap:wrap;gap:.5rem}
-.hob span{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .9rem;border-radius:99px;background:var(--tile-2);border:1px solid var(--line);font-weight:500}
-.hob svg{width:16px;height:16px;color:var(--accent)}
+/* education bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.bento .card{padding:28px}
+.b-edu{grid-column:span 3}.b-ach{grid-column:span 3;grid-row:span 2}.b-lang{grid-column:span 1}.b-hob{grid-column:span 2}.b-ref{grid-column:span 3}
+.bento .k{font:500 12.5px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.bento h3{font:700 20px/1.35 "Space Grotesk",system-ui,sans-serif;margin:10px 0 4px}
+.bento .muted{color:var(--muted);font-size:14.5px}
+.exp-chip{display:inline-block;margin-top:12px;font:500 12px var(--mono);padding:4px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.ach{list-style:none;margin-top:14px}
+.ach li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:600}
+.ach li:last-child{border:0}
+.ach li span{display:block;font-weight:400;font-size:13.5px;color:var(--muted)}
+.simple{list-style:none;margin-top:12px;display:grid;gap:6px;font-weight:500}
+.hob{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
-.cta{background:var(--dark);color:var(--dark-ink);border-radius:32px;padding:clamp(2rem,5vw,4rem);display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
-.cta h2{font-size:clamp(2.2rem,1.3rem + 3.6vw,4.6rem);letter-spacing:-.05em;line-height:.95;margin:0;max-width:13ch}
-.cta p{margin:1rem 0 0;opacity:.7;max-width:40ch}
-.cta .row{display:flex;flex-wrap:wrap;gap:.6rem}
-.cta .btn.ghost{color:var(--dark-ink);border-color:color-mix(in srgb,var(--dark-ink) 30%,transparent)}
-footer{padding:2rem 0 3rem;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.toast{position:fixed;left:50%;bottom:calc(1.2rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--dark);color:var(--dark-ink);padding:.6rem 1rem;border-radius:99px;font-size:.88rem;opacity:0;pointer-events:none;transition:opacity .25s,transform .3s var(--ease);z-index:40}
-.toast.show{opacity:1;transform:translate(-50%,0)}
+/* contact */
+.contact{text-align:center;padding:130px 0 90px}
+.contact h2{font-size:clamp(46px,9vw,124px)}
+.contact h2 span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.contact p{max-width:560px;margin:24px auto 34px;color:var(--muted);font-size:17px}
+.contact .cta-row{justify-content:center}
+footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:26px 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--dim);font-size:14px;max-width:1440px;margin:0 auto}
 
-.load{opacity:0;transform:translateY(16px) scale(.985);animation:in .9s var(--ease) forwards}
-@keyframes in{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.load{opacity:1;transform:none}}
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);margin:auto}
+dialog.lb::backdrop{background:rgba(13,18,34,.82);backdrop-filter:blur(4px)}
+dialog.lb img{display:block;width:100%;height:auto;border-radius:12px}
+dialog.lb p{color:#e6e9f2;text-align:center;margin-top:12px;font-size:14px}
+dialog.lb button{position:fixed;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(13,18,34,.6);color:#fff;font-size:22px;cursor:pointer}
 
-/* print = PDF CV */
+@media (max-width:1060px){
+  .nav{display:none}.menu-btn{display:block}
+  .hero-grid,.about,.proj,.proj:nth-child(even),.ai-hero,.ai{grid-template-columns:1fr}
+  .proj:nth-child(even) .gallery{order:0;border-left:0}
+  .gallery{border-right:0!important;border-bottom:1px solid var(--line)}
+  .steps,.skills{grid-template-columns:1fr 1fr}
+  .job{grid-template-columns:1fr;gap:12px}
+  .bento{grid-template-columns:1fr 1fr}.bento .card{grid-column:span 2!important;grid-row:auto!important}
+  .bento .b-lang,.bento .b-hob{grid-column:span 1!important}
+  .stats{grid-template-columns:1fr 1fr}
+  .sec-head{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .wrap,.bar{padding:0 20px}
+  .hdr-r .btn-line{display:none}
+  .steps,.skills{grid-template-columns:1fr}
+  .bento .b-lang,.bento .b-hob{grid-column:span 2!important}
+  .pbody,.gallery,.about .card,.ai-hero{padding:24px}
+  section{padding:84px 0}
+  .thumbs{gap:6px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* print / Save as PDF */
 @media print{
   @page{margin:14mm}
-  :root{--bg:#fff;--tile:#fff;--tile-2:#f4f5f7;--ink:#111;--muted:#555;--line:#ddd;--dark:#111;--dark-ink:#fff}
-  body{font-size:10.5pt;background:#fff}
-  .bar,.cta,.ill,.row,.copy,.toast,footer .no-print,.skip,.id .mono-tile{display:none!important}
-  .load{opacity:1;transform:none;animation:none}
-  .tile{box-shadow:none!important;border:1px solid #ddd;break-inside:avoid;padding:10pt;border-radius:10pt}
-  .tile::after{display:none}
-  section{padding-block:10pt}
-  .head{margin-bottom:8pt}.head h2{font-size:18pt}.head p{display:none}
-  .bento{grid-template-columns:repeat(6,1fr)}
-  .hero-t{grid-column:span 4;min-height:0}.hero-t h1{font-size:30pt}
-  .id{grid-column:span 2;background:#fff;color:#111;border-color:#ddd}
-  .contact{grid-column:span 4}.stat{grid-column:span 1}.stat.hot{background:#fff;color:#111;border-color:#ddd}
-  .p,.p.wide,.p.wide.flip{grid-column:span 6;display:block}
-  .sgrid,.trio,.about{grid-template-columns:repeat(3,1fr)}
-  .about{grid-template-columns:1.5fr 1fr}
-  a{text-decoration:none}
-}
-/* ---- v2 additions ---- */
-.ill{min-height:320px}
-.ill .body{position:relative}
-.try{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;gap:.4rem;font:600 .74rem var(--f);padding:.45rem .8rem;border-radius:99px;border:1px solid var(--line);background:var(--tile);color:var(--ink);cursor:pointer;transition:border-color .2s,transform .2s var(--spring)}
-.try:hover{border-color:var(--accent);transform:scale(1.04)}
-.try svg{width:13px;height:13px;color:var(--accent)}
-.pipe div{transition:background .35s var(--ease),color .35s,border-color .35s}
-.timeline div::before{transition:background .35s,border-color .35s,box-shadow .35s}
-.rows .r em{transition:background .3s,color .3s}
-.slots-num{font-variant-numeric:tabular-nums}
-.case{margin-top:1.1rem;border-top:1px solid var(--line)}
-.case summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:.9rem 0 .2rem;font-weight:600}
-.case summary::-webkit-details-marker{display:none}
-.case summary span{display:inline-flex;align-items:center;gap:.45rem}
-.case summary i{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background .2s}
-.case summary i svg{width:14px;height:14px}
-.case[open] summary i{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.case summary:hover i{border-color:var(--ink)}
-.case-body{display:grid;gap:1rem;padding:1rem 0 .3rem;animation:caseIn .45s var(--ease)}
-@keyframes caseIn{from{opacity:0;transform:translateY(-6px)}}
-.case-body h4{margin:0 0 .35rem;font:500 .76rem var(--fm);color:var(--accent)}
-.case-body p{margin:0;font-size:.95rem}
-.case-body ul{margin:0;padding-left:1.1rem;display:grid;gap:.4rem;font-size:.95rem}
-.case-body li b{font-weight:600}
-.learned{background:var(--tile-2);border:1px solid var(--line);border-radius:14px;padding:.9rem 1rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;counter-reset:s}
-.step{display:flex;flex-direction:column;gap:.5rem}
-.step .n{width:38px;height:38px;border-radius:12px;background:var(--accent-soft);color:color-mix(in srgb,var(--accent) 85%,var(--ink));display:grid;place-items:center;font-weight:700;font-family:var(--fm)}
-.step h3{margin:.4rem 0 0;font-size:1.15rem;letter-spacing:-.02em}
-.step p{margin:0;color:var(--muted);font-size:.93rem}
-@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
-.stat .word{font-size:clamp(1.7rem,1.2rem + 1.4vw,2.4rem)}
-@media print{
-  .try,.case summary i{display:none!important}
-  .case{border:0}
-  .case:not([open]) > .case-body{display:grid}
-  details.case > summary{padding-top:4pt;font-size:9pt;color:#555}
-  .steps{grid-template-columns:repeat(4,1fr)}
-  .bento .stat{display:none}
-  .hero-t{grid-column:span 6}
-  .contact{grid-column:span 6}
-  .id{display:none!important}
+  body{background:#fff;font-size:11pt}
+  body:before,#fluid,.cursor,header,.mmenu,.gallery,.cta-row,.contact .cta-row,details.case summary,dialog,.copy,.ai-hero .btn-w{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero{min-height:0;padding:0 0 10mm}
+  .hero h1{font-size:40pt}
+  .hero-grid,.about,.proj,.proj:nth-child(even),.ai,.ai-hero,.steps,.skills,.bento,.job,.stats{grid-template-columns:1fr!important;display:block}
+  .card,.stat{box-shadow:none;border:1px solid #ddd;margin-bottom:5mm;break-inside:avoid}
+  .ai-hero{background:#fff;color:#000}.ai-hero p,.ai-list li span{color:#333}
+  details.case .cbody{display:block}
+  section{padding:6mm 0}
+  .sec-head h2{font-size:22pt}
+  .contact h2{font-size:24pt}
+  body{font-size:9.5pt;line-height:1.45}
+  .hero h1{font-size:28pt}.hero .hi{margin-top:4mm}
+  .avatar,.idcard:before,.stats,.ai-list,.look p,.pending-shots,details.case,.contact,.status{display:none!important}
+  .card,.idcard{padding:4mm!important;margin-bottom:3mm;border-radius:3mm}
+  .sec-head{margin-bottom:3mm}.sec-head h2{font-size:18pt}.sec-head p{display:none}
+  .pbody h3{font-size:15pt;margin:2mm 0 1mm}.pbody dl{margin-top:2mm;gap:1.5mm}
+  .ai-hero h3{font-size:13pt}.job{padding:4mm}.job ul{margin-top:1mm}
+  .wrap{padding:0}
+  .sec-head{break-after:avoid;page-break-after:avoid}
+  section{break-before:auto}
+  #projects,#experience,#education{break-before:page}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<canvas id="fluid" aria-hidden="true"></canvas>
+<div class="cursor" aria-hidden="true"></div>
 
-<div class="bar wrap"><div class="bar-in">
-  <a class="logo" href="#top">Yoj T. Cuison</a>
-  <nav aria-label="Sections"><a href="#about">About</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a></nav>
-  <div class="bar-actions">
-    <button class="icon-btn" id="theme" type="button" aria-label="Switch color theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
-    <button class="btn" type="button" data-print><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Save as PDF</button>
+<header id="hdr">
+  <div class="bar">
+    <a class="logo" href="#top"><b>YC</b>Yoj T. Cuison</a>
+    <ul class="nav" id="nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+    <div class="hdr-r">
+      <button class="btn btn-line" type="button" onclick="window.print()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>Save as PDF</button>
+      <a class="btn btn-ink" href="mailto:cuisonyoj@gmail.com">Email me</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><span class="burger"></span></button>
+    </div>
   </div>
-</div></div>
+</header>
 
-<main class="wrap" id="main">
-  <div class="bento" id="top">
-    <div class="tile hero-t load">
+<nav class="mmenu" id="mmenu" aria-label="Mobile">
+  <ol>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#ai">AI</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+  </ol>
+</nav>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap" style="width:100%">
+    <div class="hero-grid">
       <div>
-        <p class="label">BS Information Technology, Angeles University Foundation</p>
-        <h1>Yoj T.<br>Cuison<small>4th-year BSIT student, varsity athlete, and licensed real estate salesperson</small></h1>
-        <p>I’m a student athlete who builds web systems and works part-time in real estate. I’m still learning every day, and I’m looking for an internship in Web Development, Software QA, or Systems where I can learn from experienced people and contribute to real work.</p>
+        <span class="status"><i></i>Open to internship, 2026–2027</span>
+        <p class="hi">Hi, I am</p>
+        <h1 class="display"><span>Yoj T.</span><span class="outline">Cuison</span></h1>
+        <p class="role">BSIT student · <b class="typed" id="typed">Full-stack developer</b></p>
+        <p class="lead">I'm a student athlete who builds web systems, tests them carefully, and is learning to design with AI. I'm looking for an internship in Web Development, Software QA, or Systems where I can learn from experienced people and contribute to real work.</p>
+        <div class="cta-row">
+          <a class="btn btn-ink" href="#projects">See my projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="btn btn-line" href="/pdc60-ai-portfolio/">AI learning portfolio</a>
+          <a class="btn btn-line" href="https://github.com/YjoNosiuc" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        </div>
       </div>
-      <div class="row"><a class="btn" href="mailto:cuisonyoj@gmail.com">Email me</a><a class="btn dark" href="#projects">See projects</a></div>
+      <aside class="idcard reveal" aria-label="Contact card">
+        <div class="avatar">YC</div>
+        <h2>Yoj T. Cuison</h2>
+        <div class="sub">BS Information Technology, Angeles University Foundation</div>
+        <div class="tags"><span class="tag">Student</span><span class="tag">Athlete</span><span class="tag">Realtor</span><span class="tag">Developer</span></div>
+        <ul class="contact-list">
+          <li><span>Location</span>Angeles City, Pampanga</li>
+          <li><span>Email</span><div><a href="mailto:cuisonyoj@gmail.com">cuisonyoj@gmail.com</a><button class="copy" data-copy="cuisonyoj@gmail.com">Copy</button></div></li>
+          <li><span>Mobile</span><div><a href="tel:+639470330275">0947 033 0275</a><button class="copy" data-copy="09470330275">Copy</button></div></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yojcuison">in/yojcuison</a></li>
+          <li><span>GitHub</span><a href="https://github.com/YjoNosiuc">YjoNosiuc</a></li>
+        </ul>
+      </aside>
     </div>
-    <div class="tile id load" style="animation-delay:.08s">
-      <div class="mono-tile" aria-hidden="true"><b>YC</b></div>
-      <div><span class="open">Open to internship, 2026–2027</span><p class="roles">Student / Athlete / Realtor / Developer</p></div>
+    <div class="stats">
+      <div class="stat reveal"><b>5</b><span>web systems built in school and personal projects</span></div>
+      <div class="stat reveal"><b>IEEE</b><span>capstone paper accepted at ITIS 2026</span></div>
+      <div class="stat reveal"><b>E2E</b><span>automated testing with Playwright and PHPUnit</span></div>
+      <div class="stat reveal"><b>2027</b><span>expected graduation</span></div>
     </div>
-    <div class="tile contact load" style="animation-delay:.14s">
-      <p class="label">Contact</p>
-      <dl>
-        <dt>Address</dt><dd>Angeles City, Pampanga, Philippines</dd>
-        <dt>Email</dt><dd><a href="mailto:cuisonyoj@gmail.com">cuisonyoj@gmail.com</a><button class="copy" type="button" data-copy="cuisonyoj@gmail.com">Copy</button></dd>
-        <dt>Mobile</dt><dd><a href="tel:+639470330275">0947 033 0275</a><button class="copy" type="button" data-copy="09470330275">Copy</button></dd>
-        <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">linkedin.com/in/yojcuison</a></dd>
-        <dt>GitHub</dt><dd><a href="https://github.com/YjoNosiuc" target="_blank" rel="noopener">github.com/YjoNosiuc</a></dd>
-      </dl>
-    </div>
-    <div class="tile stat hot load" style="animation-delay:.2s"><b data-n="4">0</b><span>web systems built so far</span></div>
-    <div class="tile stat load" style="animation-delay:.24s"><b class="word">E2E</b><span>automated testing with Playwright and PHPUnit</span></div>
-    <div class="tile stat load" style="animation-delay:.28s"><b class="word">2027</b><span>expected graduation</span></div>
   </div>
+</section>
 
-  <section id="about">
-    <div class="head"><h2>About me</h2><p>A student developer eager to grow in a real team.</p></div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">01 / About</span><h2 class="display">About me</h2></div><p>A student developer eager to grow in a real team.</p></div>
     <div class="about">
-      <div class="tile">
-        <p>I’m a fourth-year BSIT student at Angeles University Foundation, a varsity basketball player, and a licensed real estate salesperson, all at the same time. Through school projects, I’ve had the chance to work on full-stack web systems, including a research management system for university offices that was pilot tested with its actual users. Our team’s capstone, FAST Track, was also accepted as a paper at the IEEE ITIS 2026 conference.</p>
-        <p>Along the way, I became interested in software testing and quality. I’ve written automated tests with Playwright and PHPUnit and helped run user acceptance testing, and I’d like to learn how professional teams handle testing, code reviews, and deployment.</p>
+      <div class="card reveal">
+        <p>I'm a fourth-year BSIT student at Angeles University Foundation, a varsity basketball player, and a licensed real estate salesperson, all at the same time. Through school projects, I've worked on full-stack web systems, including a research management system for university offices that was pilot tested with its actual users. Our team's capstone, FAST Track, was also accepted as a paper at the IEEE ITIS 2026 conference.</p>
+        <p>Along the way, I became interested in software testing and quality. I've written automated tests with Playwright and PHPUnit and helped run user acceptance testing. This semester I also studied conversational AI and prompt engineering, and I built YC Connect, an AI assistant for my real estate work.</p>
         <p>Being a student athlete while working in real estate has taught me to manage my time, stay disciplined, listen to clients, and communicate with all kinds of people. I bring that same work ethic to every project.</p>
       </div>
-      <div class="tile looking">
-        <p class="label">Looking for</p>
+      <div class="card look reveal">
+        <h3>LOOKING FOR</h3>
         <ul>
-          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></i>Web Development</li>
-          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></i>Software Quality Assurance</li>
-          <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></svg></i>Systems and Infrastructure</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 9-4 3 4 3m8-6 4 3-4 3M14 5l-4 14"/></svg>Web Development</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>Software Quality Assurance</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></svg>Systems and Infrastructure</li>
         </ul>
-        <small>I’m open to any of these and happy to be placed where the team needs help. I’m willing to learn new tools, languages, and ways of working.</small>
+        <p>I'm open to any of these and happy to be placed where the team needs help. I'm willing to learn new tools, languages, and ways of working.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="head"><h2>Projects</h2><p>Each project has an interactive preview of how it works and a short case study of what I built and learned. Previews are simplified illustrations.</p></div>
-    <div class="pgrid">
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">02 / Projects</span><h2 class="display">Projects</h2></div><p>Real screens from each system, captured with demo data. Click a screenshot to enlarge it.</p></div>
+    <div class="projects">
 
       <!-- KMSAR -->
-      <article class="tile p wide lift">
-        <div style="display:flex;flex-direction:column">
-          <div class="chipline"><span class="chip role">Solo, full-stack</span><span class="chip ok">Tested with Playwright</span><span class="chip">Pilot tested</span></div>
-          <h3>KMSAR</h3><p class="sub">Knowledge Management System for Academic Research, Angeles University Foundation</p>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>Faculty research records for the research office (OVPRI), CDAIC, and CCS were scattered, and approvals were tracked manually.</dd></div>
-            <div><dt>Key features</dt><dd>Research registration, a multi-stage approval flow through the dean and OVPRI, document uploads, and bulk import of faculty accounts.</dd></div>
-            <div><dt>Tech</dt><dd><div class="stack"><span>Laravel</span><span>PHP</span><span>Playwright</span></div></dd></div>
-          </dl>
-          <details class="case">
-            <summary><span>Read case study</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary>
-            <div class="case-body">
-              <div><h4>What I worked on</h4><p>I built the whole system on my own: the database, the approval workflow, the pages for each type of user, and the bulk import so the office didn’t have to create faculty accounts one by one.</p></div>
-              <div><h4>How it was tested</h4><ul><li>Automated end-to-end tests with Playwright covering each user role.</li><li>User acceptance testing with testers from different colleges. I sorted their feedback by priority and worked through it before the pilot.</li><li>A pilot demo with deans and OVPRI staff, plus a user manual for non-technical users.</li></ul></div>
-              <div class="learned"><h4>What I learned</h4><p>Real users find problems that tests don’t. Watching people use the system taught me to write clearer screens, better error messages, and documentation people can actually follow.</p></div>
-            </div>
-          </details>
-        </div>
-        <div class="ill" role="group" aria-label="Interactive illustration of the KMSAR approval flow">
-          <div class="chrome"><i></i><i></i><i></i><span>kmsar / research</span></div>
-          <div class="body">
-            <div class="kpis"><div><small>Registered</small><b>128</b></div><div><small>In review</small><b>17</b></div><div><small>Completed</small><b>64</b></div></div>
-            <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><b style="font-size:.76rem">Approval flow</b><small style="color:var(--muted);font-family:var(--fm);font-size:.64rem" id="k-status">Waiting for OVPRI</small></div>
-              <div class="pipe" id="k-pipe"><div>Proposal</div><div>Dean</div><div>OVPRI</div><div>Registered</div></div></div>
-            <div class="rows">
-              <div class="r"><b>Faculty workload and research output</b><em class="o">OVPRI review</em></div>
-              <div class="r"><b>Campus network reliability study</b><em class="g">Completed</em></div>
-            </div>
-            <button class="try" type="button" id="k-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Approve next step</button>
+      <article class="card proj reveal" data-gallery>
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>kmsar / research</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/kmsar-1.webp" alt="KMSAR faculty view listing research submissions with workflow status badges" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="KMSAR screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/kmsar-1.webp" data-cap="Faculty: research submissions with workflow status" data-alt="KMSAR faculty view listing research submissions with workflow status badges"><img src="assets/shots/kmsar-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/kmsar-2.webp" data-cap="Dean: reviewing a submission to endorse or return" data-alt="KMSAR dean review screen with Endorse and Return actions"><img src="assets/shots/kmsar-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/kmsar-3.webp" data-cap="OVPRI: university dashboard with college and SDG charts" data-alt="KMSAR university dashboard with research by college and SDG distribution charts"><img src="assets/shots/kmsar-3.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/kmsar-4.webp" data-cap="Sign-in page" data-alt="KMSAR sign-in page"><img src="assets/shots/kmsar-4.webp" alt="" loading="lazy"></button>
           </div>
-          <span class="cap">Illustration</span>
+          <p class="caption">Faculty: research submissions with workflow status</p>
         </div>
-      </article>
-
-      <!-- GANAP PH -->
-      <article class="tile p wide flip lift">
-        <div class="ill" role="group" aria-label="Interactive illustration of GANAP PH event registration">
-          <div class="chrome"><i></i><i></i><i></i><span>ganap.ph / events</span></div>
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:.8rem">Barangay events this month</b><span class="live">Live slots</span></div>
-            <div class="events">
-              <div class="ev"><div class="thumb"></div><b>Libreng Check-up Day</b><div class="meta"><span>Oct 12</span><span><span class="slots-num" id="g-slots">12</span> slots left</span></div><div class="bar-line"><i id="g-bar" style="width:76%"></i></div></div>
-              <div class="ev"><div class="thumb"></div><b>Liga ng Barangay</b><div class="meta"><span>Oct 19</span><span>6 slots left</span></div><div class="bar-line"><i style="width:88%"></i></div></div>
-            </div>
-            <div class="card pay"><div><b style="font-size:.76rem">Zumba sa Plaza</b><div style="font:.64rem var(--fm);color:var(--muted)">Registration fee, paid online</div></div><span class="btnm">Pay and register</span></div>
-            <button class="try" type="button" id="g-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Register a resident</button>
-          </div>
-          <span class="cap">Illustration</span>
-        </div>
-        <div style="display:flex;flex-direction:column">
-          <div class="chipline"><span class="chip role">Team, full-stack and integrations</span><span class="chip">School project</span></div>
-          <h3>GANAP PH</h3><p class="sub">Event registration system for barangays</p>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>Barangay events are usually announced on paper or social media, with no easy way for residents to sign up or for officials to control slots.</dd></div>
-            <div><dt>Key features</dt><dd>Residents browse barangay events and register online. Remaining slots update in real time, paid events go through online checkout, and automations handle follow-up tasks.</dd></div>
-            <div><dt>Tech</dt><dd><div class="stack"><span>Laravel</span><span>Vue</span><span>Inertia.js</span><span>Laravel Echo</span><span>Stripe</span><span>Make.com</span><span>Playwright</span></div></dd></div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">Solo, full-stack</span><span class="badge">Pilot tested</span><span class="badge">Playwright</span></div>
+          <h3>KMSAR</h3>
+          <p class="what">Knowledge Management System for Academic Research, Angeles University Foundation</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Faculty research records for the research office (OVPRI), CDAIC, and the colleges were scattered, and approvals were tracked manually.</dd></div>
+            <div><dt>What it does</dt><dd>Research registration, a multi-stage approval flow through the dean and OVPRI, document uploads, dashboards per role, and bulk import of faculty accounts.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Blade</span><span>Chart.js</span><span>Playwright</span></dd></div>
           </dl>
-          <details class="case">
-            <summary><span>Read case study</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary>
-            <div class="case-body">
-              <div><h4>What I worked on</h4><p>Full-stack development and the integrations: real-time slot updates, online payments, and workflow automation. I learned most of these tools while building the project.</p></div>
-              <div><h4>Problems I worked through</h4><ul>
-                <li><b>Payments:</b> the payment provider’s confirmations were being blocked by the app’s form security. Moving the webhook to the API routes fixed it.</li>
-                <li><b>Real-time slots:</b> the private live channel kept failing authentication, so I switched to a public broadcast channel for slot counts, since they aren’t sensitive data.</li>
-                <li><b>Testing:</b> end-to-end tests failed on the built-in development server because it handles one request at a time, so I ran them on Apache instead.</li>
-                <li><b>Automation:</b> compared Zapier and Make.com and chose Make.com, since its webhook trigger works on the free plan.</li>
-              </ul></div>
-              <div class="learned"><h4>What I learned</h4><p>How webhooks and real-time broadcasting work in practice, and that reading error messages carefully and testing one change at a time saves hours.</p></div>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>My role</h4><p>I built the system on my own, from database design to deployment preparation, and worked with the research office to match their real process.</p>
+              <h4>Highlights</h4>
+              <ul>
+                <li>Separate dashboards for super admin, OVPRI and CDAIC admins, deans and unit heads, and faculty.</li>
+                <li>A two-cycle workflow: research is registered first, then reviewed again when it is completed, with endorse or return at each step.</li>
+                <li>Reports by college, progress stage and Sustainable Development Goal, plus audit logs of important actions.</li>
+                <li>Email OTP password reset and an idle-session timeout for shared office computers.</li>
+              </ul>
+              <h4>What I learned</h4><p>Designing a workflow is mostly about edge cases: returned submissions, co-authors from other colleges, and records that existed before the system. Pilot testing with deans and OVPRI staff showed me what to fix first.</p>
             </div>
           </details>
         </div>
       </article>
 
-      <!-- FAST Track -->
-      <article class="tile p lift">
-        <div class="ill" role="group" aria-label="Interactive illustration of FAST Track request tracking">
-          <div class="chrome"><i></i><i></i><i></i><span>fast-track / my requests</span></div>
-          <div class="body">
-            <div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:10px"><b style="font-size:.78rem">Transcript of Records</b><em id="f-badge" style="font-style:normal;font:.64rem var(--fm);padding:2px 7px;border-radius:99px;background:var(--accent-soft);color:color-mix(in srgb,var(--accent) 80%,var(--ink))">Processing</em></div>
-              <div class="timeline" id="f-tl"><div>Request submitted<small>Sep 18</small></div><div>Clearance approved<small>Sep 20</small></div><div>Being processed by registrar<small>Today</small></div><div>Ready for release<small>&nbsp;</small></div></div></div>
-            <button class="try" type="button" id="f-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Move to next status</button>
+      <!-- FAST TRACK -->
+      <article class="card proj reveal" data-gallery id="p-fasttrack">
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>fast-track / my requests</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/ft-1.webp" alt="FAST Track student dashboard with request counts and a recent requests table" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="FAST Track screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/ft-1.webp" data-cap="Student dashboard: requests, payment and status at a glance" data-alt="FAST Track student dashboard with request counts and a recent requests table"><img src="assets/shots/ft-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/ft-2.webp" data-cap="Request tracking with a QR code for claiming documents" data-alt="FAST Track request tracking page with verification status and a QR code"><img src="assets/shots/ft-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/ft-3.webp" data-cap="Registrar queue with status, payment and program filters" data-alt="FAST Track registrar document request queue with filters and status badges"><img src="assets/shots/ft-3.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/ft-4.webp" data-cap="Clearance status across program chair, dean, library, accounting and registrar" data-alt="FAST Track clearance status page listing five clearance offices"><img src="assets/shots/ft-4.webp" alt="" loading="lazy"></button>
           </div>
-          <span class="cap">Illustration</span>
+          <p class="caption">Student dashboard: requests, payment and status at a glance</p>
         </div>
-        <div class="chipline"><span class="chip role">Team of 4, full-stack</span><span class="chip ok">Paper accepted at IEEE ITIS 2026</span><span class="chip">Capstone</span></div>
-        <h3>FAST Track</h3><p class="sub">AUF Registrar document request and tracking system</p>
-        <dl class="facts">
-          <div><dt>Problem</dt><dd>Students had to request academic documents in person and couldn’t see where their request stood.</dd></div>
-          <div><dt>Key features</dt><dd>Online document requests, clearance approvals across offices, status tracking, generated PDF documents, and OTP or Google sign-in.</dd></div>
-          <div><dt>Tech</dt><dd><div class="stack"><span>Laravel</span><span>Blade</span><span>Alpine.js</span><span>MySQL</span><span>dompdf</span></div></dd></div>
-        </dl>
-        <details class="case">
-          <summary><span>Read case study</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary>
-          <div class="case-body">
-            <div><h4>Problems I worked through</h4><ul>
-              <li><b>Disappearing errors:</b> form error messages vanished when the front-end script reloaded, so I moved them outside the interactive components.</li>
-              <li><b>PDF output:</b> the PDF library couldn’t display the peso sign, so I changed fonts and formatting.</li>
-              <li><b>Stronger tests:</b> learned that checking a page isn’t “forbidden” isn’t enough. Tests should confirm the action actually succeeded.</li>
-            </ul></div>
-            <div><h4>Evaluation and publication</h4><p>Evaluated with the Technology Acceptance Model and ISO quality criteria through a survey of IT experts. Our paper on the system was accepted at the IEEE ITIS 2026 conference (October 14–16, 2026), a Scopus-indexed conference, and the project was endorsed by our adviser for final defense.</p></div>
-            <div class="learned"><h4>What I learned</h4><p>Working in a team of four meant agreeing on structure early and keeping documentation in sync with the real setup, which saved us a lot of debugging.</p></div>
-          </div>
-        </details>
-      </article>
-
-      <!-- RentTrack -->
-      <article class="tile p lift">
-        <div class="ill" role="group" aria-label="Interactive illustration of the RentTrack tenant list">
-          <div class="chrome"><i></i><i></i><i></i><span>renttrack / tenants</span></div>
-          <div class="body">
-            <div class="kpis"><div><small>Units</small><b>18</b></div><div><small>Paid</small><b id="r-paid">14</b></div><div><small>Due</small><b id="r-due">4</b></div></div>
-            <div class="rows" id="r-rows">
-              <div class="r"><b>Unit 2A, Dela Cruz</b><em class="g">Paid</em></div>
-              <div class="r"><b>Unit 3B, Santos</b><em class="o">Due Oct 5</em></div>
-              <div class="r"><b>Unit 4A, Reyes</b><em class="o">Due Oct 8</em></div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">IEEE ITIS 2026 paper</span><span class="badge">Team of 4, full-stack</span><span class="badge">Capstone</span></div>
+          <h3>FAST Track</h3>
+          <p class="what">AUF Registrar document request and tracking system</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Students had to request academic documents in person and couldn't see where their request stood.</dd></div>
+            <div><dt>What it does</dt><dd>Online document requests, clearance approvals across five offices, payment verification, status tracking with QR codes for release, generated PDFs, reports, and OTP or Google sign-in.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Laravel</span><span>Blade</span><span>Alpine.js</span><span>MySQL</span><span>dompdf</span></dd></div>
+          </dl>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>My role</h4><p>Full-stack developer in a team of four, working on request flows, approvals and document generation.</p>
+              <h4>Recognition</h4><p>Endorsed for final defense in September 2026, and our paper was accepted at IEEE ITIS 2026, a Scopus-indexed conference.</p>
+              <h4>What I learned</h4><p>How to split work across a team, keep one codebase consistent, and explain a system clearly in a research paper.</p>
             </div>
-            <button class="try" type="button" id="r-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Record a payment</button>
-          </div>
-          <span class="cap">Illustration</span>
+          </details>
         </div>
-        <div class="chipline"><span class="chip role">Full-stack</span><span class="chip ok">Tested with PHPUnit</span></div>
-        <h3>RentTrack</h3><p class="sub">Multi-owner rental management system</p>
-        <dl class="facts">
-          <div><dt>Problem</dt><dd>Small landlords track tenants and rent payments in notebooks and chat threads.</dd></div>
-          <div><dt>Key features</dt><dd>Separate accounts for multiple owners, a tenant portal, and Philippine addresses using the official PSGC codes. GCash and Maya payments are planned.</dd></div>
-          <div><dt>Tech</dt><dd><div class="stack"><span>Laravel</span><span>PHP</span><span>PHPUnit</span></div></dd></div>
-        </dl>
-        <details class="case">
-          <summary><span>Read case study</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary>
-          <div class="case-body">
-            <div><h4>What I worked on</h4><p>The full system: owner and tenant accounts, property and unit records, the tenant portal, and address selection from region down to barangay using PSGC data.</p></div>
-            <div class="learned"><h4>What I learned</h4><p>How to keep each owner’s data separate in one system, and how writing tests early makes it safer to add features later.</p></div>
-          </div>
-        </details>
       </article>
-    </div>
-  </section>
 
-  <section id="approach">
-    <div class="head"><h2>How I approach a project</h2><p>The process I try to follow, and keep improving.</p></div>
-    <div class="steps">
-      <div class="tile step lift"><span class="n">1</span><h3>Understand the need</h3><p>Talk to the people who will use it and write down what they actually need before building.</p></div>
-      <div class="tile step lift"><span class="n">2</span><h3>Build in small steps</h3><p>Plan the database and screens, then build one feature at a time so problems are easy to trace.</p></div>
-      <div class="tile step lift"><span class="n">3</span><h3>Test as I go</h3><p>Write automated tests for the important flows so changes don’t break what already works.</p></div>
-      <div class="tile step lift"><span class="n">4</span><h3>Listen and improve</h3><p>Let real users try it, collect their feedback, and fix what matters most first.</p></div>
-    </div>
-  </section>
+      <!-- RENTTRACK -->
+      <article class="card proj reveal" data-gallery>
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>renttrack / dashboard</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/rt-1.webp" alt="RentTrack owner dashboard with property, unit, lease and payment totals" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="RentTrack screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/rt-1.webp" data-cap="Owner dashboard: properties, units, leases and recent payments" data-alt="RentTrack owner dashboard with property, unit, lease and payment totals"><img src="assets/shots/rt-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/rt-2.webp" data-cap="Payments: verify tenant proofs and track late payments" data-alt="RentTrack payments page with status counts and filters"><img src="assets/shots/rt-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/rt-3.webp" data-cap="Tenant portal: next payment due and proof upload" data-alt="RentTrack tenant dashboard showing unit, rent and upload proof button"><img src="assets/shots/rt-3.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/rt-4.webp" data-cap="Reports with PDF and Excel export" data-alt="RentTrack reports page with monthly rent chart and export buttons"><img src="assets/shots/rt-4.webp" alt="" loading="lazy"></button>
+          </div>
+          <p class="caption">Owner dashboard: properties, units, leases and recent payments</p>
+        </div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">Full-stack</span><span class="badge">PHPUnit</span></div>
+          <h3>RentTrack</h3>
+          <p class="what">Multi-owner rental management system</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Small landlords track tenants and rent payments in notebooks and chat threads.</dd></div>
+            <div><dt>What it does</dt><dd>Separate accounts for multiple owners, properties and units, leases with PDF contracts, a tenant portal with payment proof upload, and reports.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>Tailwind</span><span>Alpine.js</span><span>PHPUnit</span></dd></div>
+          </dl>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>Highlights</h4>
+              <ul>
+                <li>Tenants upload proof of payment, and owners verify, reject or mark payments as late.</li>
+                <li>Tenants must agree to the owner's terms and conditions before using the portal.</li>
+                <li>Philippine addresses use the official PSGC codes.</li>
+                <li>Reports export to PDF and Excel, with in-app notifications for both sides.</li>
+              </ul>
+              <h4>What's next</h4><p>GCash and Maya payments are planned.</p>
+            </div>
+          </details>
+        </div>
+      </article>
 
-  <section id="skills">
-    <div class="head"><h2>Skills</h2><p>Tools I’ve used in school and personal projects, and still improving on.</p></div>
-    <div class="sgrid">
-      <div class="tile lift"><h3>Build</h3><p>Full-stack web development</p><div class="chipline"><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Vue</span><span class="chip">Inertia.js</span><span class="chip">React</span><span class="chip">Alpine.js</span><span class="chip">Node.js / Express</span><span class="chip">NestJS</span><span class="chip">Python</span><span class="chip">C#</span></div></div>
-      <div class="tile lift"><h3>Test and ship</h3><p>Quality assurance and tooling</p><div class="chipline"><span class="chip">Playwright</span><span class="chip">PHPUnit</span><span class="chip">UAT planning</span><span class="chip">Bug triage</span><span class="chip">STLC and ISTQB basics</span><span class="chip">AWS Cloud Foundations</span><span class="chip">Git and GitHub</span><span class="chip">Technical documentation</span></div></div>
-      <div class="tile lift"><h3>Data and integrations</h3><p>Databases, APIs, and AI tools</p><div class="chipline"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Redis</span><span class="chip">Stripe</span><span class="chip">Webhooks</span><span class="chip">Laravel Echo</span><span class="chip">Make.com</span><span class="chip">Prompt engineering</span><span class="chip">AI-assisted development</span></div></div>
-    </div>
-  </section>
+      <!-- HUREY LMS -->
+      <article class="card proj reveal" data-gallery id="p-lms">
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>hurey-lms / admin</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/lms-1.webp" alt="Hurey LMS admin dashboard with student, professor and section counts and a student table" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="Hurey LMS screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/lms-1.webp" data-cap="Admin: users, sections and course assignments" data-alt="Hurey LMS admin dashboard with student, professor and section counts and a student table"><img src="assets/shots/lms-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/lms-2.webp" data-cap="Professor dashboard: classes today and upcoming deadlines" data-alt="Hurey LMS professor dashboard with classes today and upcoming deadlines"><img src="assets/shots/lms-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/lms-3.webp" data-cap="Courses assigned to a professor's section" data-alt="Hurey LMS course cards for a professor's section"><img src="assets/shots/lms-3.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/lms-4.webp" data-cap="Student course page with modules and assignments" data-alt="Hurey LMS student course page showing module and assignment counts"><img src="assets/shots/lms-4.webp" alt="" loading="lazy"></button>
+          </div>
+          <p class="caption">Admin: users, sections and course assignments</p>
+        </div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">Team, full-stack</span><span class="badge">School final project</span></div>
+          <h3>Hurey LMS</h3>
+          <p class="what">Learning management system for sections, courses and coursework</p>
+          <dl>
+            <div><dt>Goal</dt><dd>Give each class one place for its materials, assignments, quizzes and grades.</dd></div>
+            <div><dt>What it does</dt><dd>Admins manage users, sections and course assignments. Professors post modules with files, assignments and quizzes, then grade submissions. Students see their courses, download modules and submit work.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Laravel</span><span>PHP</span><span>Blade</span><span>Bootstrap</span><span>Alpine.js</span><span>DataTables</span><span>SQLite / MySQL</span></dd></div>
+          </dl>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>Highlights</h4>
+              <ul>
+                <li>Three roles (admin, professor and student), each with its own dashboard and navigation.</li>
+                <li>Sections and subjects are linked to professors, so each class gets its own course page.</li>
+                <li>Assignment submissions accept files or text and can be graded with feedback.</li>
+                <li>Quizzes with multiple-choice questions, attempts and answers.</li>
+              </ul>
+              <h4>What I learned</h4><p>Designing a role-based data model where sections, subjects and users connect in several ways, and splitting full-stack work across a team.</p>
+            </div>
+          </details>
+        </div>
+      </article>
 
-  <section id="experience">
-    <div class="head"><h2>Experience</h2><p>Work and leadership alongside full-time studies.</p></div>
-    <div class="xp">
-      <div class="tile lift"><div class="when">Aug 2025 to present<b>Part-time</b></div><div><h3>Licensed Real Estate Salesperson</h3><p class="org">A. Paruli Realty, Angeles City and Clark</p><ul><li>Handle clients from first inquiry to reservation while studying full time.</li><li>Run my own real estate brand, YC Estate, including its website, social media content, and online ad campaigns for lead generation.</li></ul></div></div>
-      <div class="tile lift"><div class="when">2025 to 2026<b>Leadership</b></div><div><h3>Vice President</h3><p class="org">CCS College Student Council, Angeles University Foundation</p><ul><li>Helped lead the student council of the College of Computer Studies, supporting its programs and events for students.</li></ul></div></div>
-      <div class="tile lift"><div class="when">Current<b>Athletics</b></div><div><h3>Point Guard</h3><p class="org">AUF Varsity Basketball Team</p><ul><li>Balance varsity training and games with coursework, development projects, and part-time work.</li></ul></div></div>
-    </div>
-  </section>
+      <!-- YC CONNECT -->
+      <article class="card proj reveal" data-gallery id="p-ycconnect">
+        <div class="gallery">
+          <div class="frame"><div class="tb"><i></i><i></i><i></i><em>yc-connect / leads</em></div>
+            <button class="shot" type="button" aria-label="Enlarge screenshot"><img src="assets/shots/yc-1.webp" alt="YC Connect leads page with a tripping request to confirm and a table of leads with interest levels" width="1440" height="900" loading="lazy"></button></div>
+          <div class="thumbs" role="group" aria-label="YC Connect screenshots">
+            <button type="button" aria-pressed="true" data-src="assets/shots/yc-1.webp" data-cap="Leads: tripping requests to confirm, interest levels and budgets" data-alt="YC Connect leads page with a tripping request to confirm and a table of leads with interest levels"><img src="assets/shots/yc-1.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/yc-2.webp" data-cap="Chats: Messenger conversations the bot is handling or flagged for me" data-alt="YC Connect chats list showing Messenger conversations with handling and flagged labels"><img src="assets/shots/yc-2.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/yc-5.webp" data-cap="Questions the bot couldn't answer, waiting for my reply" data-alt="YC Connect questions inbox listing customer questions the bot could not answer"><img src="assets/shots/yc-5.webp" alt="" loading="lazy"></button>
+            <button type="button" aria-pressed="false" data-src="assets/shots/yc-4.webp" data-cap="Phone-first admin: Assistant, Leads and Chats on mobile" data-alt="Three phone screens of the YC Connect admin: assistant, leads and chats"><img src="assets/shots/yc-4.webp" alt="" loading="lazy"></button>
+          </div>
+          <p class="caption">Leads: tripping requests to confirm, interest levels and budgets</p>
+        </div>
+        <div class="pbody">
+          <div class="badges"><span class="badge hl">AI, final project</span><span class="badge">Solo, full-stack</span><span class="badge">PDC60</span></div>
+          <h3>YC Connect</h3>
+          <p class="what">Messenger sales desk for Yoj Cuison Real Estate, with an AI bot named David</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Property inquiries on my Facebook page arrive at all hours, and buyers need correct prices and terms fast. One wrong price costs trust.</dd></div>
+            <div><dt>What it does</dt><dd>David answers buyers on Messenger using only facts I've approved, collects leads and site-tripping requests, and passes on what he can't answer. A phone-first admin is where I keep his knowledge correct and act on new leads.</dd></div>
+            <div><dt>Tech</dt><dd class="stack"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind</span><span>PostgreSQL + pgvector</span><span>Drizzle</span><span>Gemini · Grok · Groq</span><span>Messenger API</span></dd></div>
+          </dl>
+          <details class="case"><summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Read case study</summary>
+            <div class="cbody">
+              <h4>Highlights</h4>
+              <ul>
+                <li>An in-app Assistant reads my Google Drive folders (price lists, brochures, computations) and proposes changes as cards. Nothing reaches buyers until I confirm, and every change can be undone.</li>
+                <li>Projects are Draft or Live, and David only talks about Live projects.</li>
+                <li>Questions David can't answer from approved facts go to a Questions inbox instead of being guessed. Once I answer, he knows it from then on.</li>
+                <li>Leads get an interest level from what buyers actually said, and tripping requests land on a calendar for me to confirm.</li>
+                <li>If one AI provider is down or over quota, it falls back to another, and the admin shows daily AI usage.</li>
+              </ul>
+              <h4>Why it matters</h4><p>It applies what I learned in PDC60: grounding, prompt-injection defense, data privacy under RA 10173, and keeping a human in the final decision. <a href="/pdc60-ai-portfolio/#project" style="color:var(--accent);font-weight:600">See the full write-up →</a></p>
+            </div>
+          </details>
+        </div>
+      </article>
 
-  <section id="education">
-    <div class="head"><h2>Education and more</h2><p>School, recognition, and life outside the keyboard.</p></div>
-    <div class="trio">
-      <div class="tile span2">
-        <div class="edu-top"><div><p class="label">Education</p><h3>Bachelor of Science in Information Technology</h3><p>Angeles University Foundation, Angeles City</p></div><span class="edu-badge">Expected mid-2027</span></div>
-        <p style="margin-top:1rem;color:var(--ink)">Relevant coursework</p>
-        <div class="courses"><span class="chip">Software Quality Assurance</span><span class="chip">Systems Integration and Architecture</span><span class="chip">Systems Administration and Maintenance</span><span class="chip">AWS Academy Cloud Foundations</span><span class="chip">Capstone Project</span></div>
-      </div>
-      <div class="tile">
-        <p class="label">Achievements</p>
-        <ul class="list">
-          <li>Research paper accepted at IEEE ITIS 2026<small>FAST Track, Scopus-indexed conference, October 14–16, 2026</small></li>
-          <li>Capstone endorsed for final defense<small>FAST Track, September 2026</small></li>
-          <li>Research system pilot tested at AUF<small>KMSAR, demo with deans and OVPRI staff</small></li>
-          <li>Vice President, CCS Student Council<small>2025 to 2026</small></li>
-          <li>AUF Varsity Basketball player<small>Point guard</small></li>
-          <li>Licensed real estate salesperson<small>Since 2025</small></li>
+    </div>
+  </div>
+</section>
+
+<!-- AI -->
+<section id="ai">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">03 / New this semester</span><h2 class="display">AI &amp; Prompting</h2></div><p>What I learned in PDC60 Conversational AI and Prompt Engineering, and how I use it.</p></div>
+    <div class="ai">
+      <div class="card ai-hero reveal">
+        <div style="position:relative;z-index:1">
+          <span class="k">// PDC60 LEARNING PORTFOLIO</span>
+          <h3>From asking questions to designing AI systems.</h3>
+          <p>A full record of my semester: platform comparisons, limit testing, prompt frameworks, context engineering, AI ethics under Philippine law, and building a study agent. It ends with YC Connect.</p>
+          <a class="btn btn-w" href="/pdc60-ai-portfolio/">Open the AI portfolio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        </div>
+        <ul class="ai-list">
+          <li><b>ChatGPT vs Gemini vs Claude</b><span>Lab 1</span></li>
+          <li><b>Hallucination and verification</b><span>Lab 2</span></li>
+          <li><b>7 prompt frameworks</b><span>RTCFC · RISEN</span></li>
+          <li><b>Context Archive escape game</b><span>6/6 cleared</span></li>
+          <li><b>Claude study agent</b><span>3/3 tests</span></li>
         </ul>
       </div>
-      <div class="tile">
-        <p class="label">Languages</p>
-        <ul class="list"><li>English</li><li>Filipino</li><li>Kapampangan</li></ul>
-      </div>
-      <div class="tile">
-        <p class="label">Hobbies and interests</p>
-        <div class="hob">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9c4 3 4 11 0 14.2M19.1 4.9c-4 3-4 11 0 14.2M2 12h20M12 2v20"/></svg>Basketball</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V7a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v6a6 6 0 0 1-6 6H9a2 2 0 0 1-2-2v-6z"/><path d="M7 11h6"/></svg>Boxing</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Guitar</span>
-        </div>
-      </div>
-      <div class="tile">
-        <p class="label">Character references</p>
-        <h3 style="font-size:1.1rem">Available upon request</h3>
-        <p>Contact details of academic and professional references can be provided when needed.</p>
-      </div>
+      <div class="card reveal"><span class="num">01</span><h4>Structured prompting</h4><p>I write prompts as specifications covering role, audience, scope, format and limits, using frameworks like RTCFC, COSTAR and RISEN.</p></div>
+      <div class="card reveal"><span class="num">02</span><h4>Verifying AI output</h4><p>I check AI claims and citations against independent sources. Fluent answers can still be incomplete or made up.</p></div>
+      <div class="card reveal"><span class="num">03</span><h4>Grounding and retrieval</h4><p>I limit answers to approved sources, add citations, have the model abstain when evidence is missing, and defend against prompt injection.</p></div>
+      <div class="card reveal"><span class="num">04</span><h4>Agents with guardrails</h4><p>I built a Claude Skill with approval gates and safety rules, tested it against adversarial instructions, and revised it.</p></div>
     </div>
-  </section>
-
-  <div class="cta">
-    <div><h2>Ready to learn and help out.</h2><p>Thank you for taking the time to look through my work. I’d be grateful for the chance to learn with your team. You can reach me by email or mobile.</p></div>
-    <div class="row"><a class="btn" href="mailto:cuisonyoj@gmail.com">cuisonyoj@gmail.com</a><a class="btn ghost" href="tel:+639470330275">0947 033 0275</a></div>
   </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">04 / Approach</span><h2 class="display">How I work</h2></div><p>The process I try to follow, and keep improving.</p></div>
+    <div class="steps">
+      <div class="card step reveal"><h3>Understand the need</h3><p>Talk to the people who will use it and write down what they actually need before building.</p></div>
+      <div class="card step reveal"><h3>Build in small steps</h3><p>Plan the database and screens, then build one feature at a time so problems are easy to trace.</p></div>
+      <div class="card step reveal"><h3>Test as I go</h3><p>Write automated tests for the important flows so changes don't break what already works.</p></div>
+      <div class="card step reveal"><h3>Listen and improve</h3><p>Let real users try it, collect their feedback, and fix what matters most first.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">05 / Skills</span><h2 class="display">Toolkit</h2></div><p>Tools I've used in school and personal projects, and I'm still improving at all of them.</p></div>
+    <div class="skills">
+      <div class="card skill reveal"><h3>Build</h3><p class="sub">Full-stack web development</p>
+        <div class="chips"><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Vue</span><span class="chip">Inertia.js</span><span class="chip">React</span><span class="chip">Alpine.js</span><span class="chip">Tailwind</span><span class="chip">Node.js / Express</span><span class="chip">NestJS</span><span class="chip">Python</span><span class="chip">C#</span></div></div>
+      <div class="card skill reveal"><h3>Test and ship</h3><p class="sub">Quality assurance and tooling</p>
+        <div class="chips"><span class="chip">Playwright</span><span class="chip">PHPUnit</span><span class="chip">UAT planning</span><span class="chip">Bug triage</span><span class="chip">STLC and ISTQB basics</span><span class="chip">AWS Cloud Foundations</span><span class="chip">Git and GitHub</span><span class="chip">Technical documentation</span></div></div>
+      <div class="card skill reveal"><h3>Data and integrations</h3><p class="sub">Databases and APIs</p>
+        <div class="chips"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Redis</span><span class="chip">Stripe</span><span class="chip">Webhooks</span><span class="chip">Laravel Echo</span><span class="chip">Make.com</span><span class="chip">dompdf</span></div></div>
+      <div class="card skill new reveal"><h3>AI and prompting<span class="newtag">NEW</span></h3><p class="sub">Conversational AI, PDC60</p>
+        <div class="chips"><span class="chip">Prompt frameworks</span><span class="chip">RAG / grounding</span><span class="chip">Context engineering</span><span class="chip">Prompt-injection defense</span><span class="chip">AI output verification</span><span class="chip">Claude Skills / agents</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Claude</span><span class="chip">Grok</span><span class="chip">AI ethics, RA 10173</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">06 / Experience</span><h2 class="display">Experience</h2></div><p>Work and leadership alongside full-time studies.</p></div>
+    <div class="xp">
+      <article class="card job reveal">
+        <div><span class="n">01</span><br><span class="when">Aug 2025 – present</span><span class="kind">Part-time</span></div>
+        <div><h3>Licensed Real Estate Salesperson</h3><div class="org">A. Paruli Realty · Angeles City and Clark</div>
+          <ul><li>Handle clients from first inquiry to reservation while studying full time.</li>
+          <li>Run my own real estate brand, YC Estate, including its website, social media content, and online ad campaigns for lead generation.</li>
+          <li>Built YC Connect, an AI Messenger assistant that answers property inquiries for my page.</li></ul></div>
+      </article>
+      <article class="card job reveal">
+        <div><span class="n">02</span><br><span class="when">2025 – 2026</span><span class="kind">Leadership</span></div>
+        <div><h3>Vice President</h3><div class="org">CCS College Student Council · Angeles University Foundation</div>
+          <ul><li>Helped lead the student council of the College of Computer Studies, supporting its programs and events for students.</li></ul></div>
+      </article>
+      <article class="card job reveal">
+        <div><span class="n">03</span><br><span class="when">Current</span><span class="kind">Athletics</span></div>
+        <div><h3>Point Guard</h3><div class="org">AUF Varsity Basketball Team</div>
+          <ul><li>Balance varsity training and games with coursework, development projects, and part-time work.</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><span class="k">07 / Education</span><h2 class="display">Education</h2></div><p>School, recognition, and life outside the keyboard.</p></div>
+    <div class="bento">
+      <div class="card b-edu reveal"><span class="k">Education</span><h3>Bachelor of Science in Information Technology</h3><p class="muted">Angeles University Foundation, Angeles City</p><span class="exp-chip">Expected mid-2027</span>
+        <p class="muted" style="margin-top:18px;font-size:13px">RELEVANT COURSEWORK</p>
+        <div class="chips" style="margin-top:8px"><span class="chip">Software Quality Assurance</span><span class="chip">Systems Integration and Architecture</span><span class="chip">Systems Administration and Maintenance</span><span class="chip">Conversational AI and Prompt Engineering</span><span class="chip">AWS Academy Cloud Foundations</span><span class="chip">Capstone Project</span></div></div>
+      <div class="card b-ach reveal"><span class="k">Achievements</span>
+        <ul class="ach">
+          <li>Research paper accepted at IEEE ITIS 2026<span>FAST Track, Scopus-indexed conference, October 14–16, 2026</span></li>
+          <li>Capstone endorsed for final defense<span>FAST Track, September 2026</span></li>
+          <li>Research system pilot tested at AUF<span>KMSAR, demo with deans and OVPRI staff</span></li>
+          <li>Vice President, CCS Student Council<span>2025 to 2026</span></li>
+          <li>AUF Varsity Basketball player<span>Point guard</span></li>
+          <li>Licensed real estate salesperson<span>Since 2025</span></li>
+        </ul></div>
+      <div class="card b-lang reveal"><span class="k">Languages</span><ul class="simple"><li>English</li><li>Filipino</li><li>Kapampangan</li></ul></div>
+      <div class="card b-hob reveal"><span class="k">Interests</span><div class="hob"><span class="chip">Basketball</span><span class="chip">Boxing</span><span class="chip">Guitar</span><span class="chip">AI tools</span></div></div>
+      <div class="card b-ref reveal"><span class="k">Character references</span><h3>Available upon request</h3><p class="muted">Contact details of academic and professional references can be provided when needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="display reveal">READY TO<span>LEARN</span></h2>
+    <p class="reveal">Thank you for taking the time to look through my work. I'd be grateful for the chance to learn with your team. You can reach me by email or mobile.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-ink" href="mailto:cuisonyoj@gmail.com">cuisonyoj@gmail.com</a>
+      <a class="btn btn-line" href="tel:+639470330275">0947 033 0275</a>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="wrap"><span>© 2026 Yoj T. Cuison</span><span class="no-print">Angeles City, Pampanga</span></footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<footer><span>© 2026 Yoj T. Cuison</span><span>Angeles City, Pampanga</span></footer>
+
+<dialog class="lb" id="lb" aria-label="Screenshot preview">
+  <button type="button" id="lbClose" aria-label="Close preview">×</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
 
 <script>
-const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
-const $=id=>document.getElementById(id);
-/* counters */
-document.querySelectorAll("[data-n]").forEach(b=>{const end=+b.dataset.n;if(reduce){b.textContent=end;return}
-  const t0=performance.now()+300;(function f(n){const p=Math.max(0,Math.min((n-t0)/1400,1));b.textContent=Math.round(end*(1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(f);else b.textContent=end})(t0)});
-/* spotlight */
-document.querySelectorAll(".tile").forEach(t=>t.addEventListener("pointermove",e=>{const r=t.getBoundingClientRect();t.style.setProperty("--mx",e.clientX-r.left+"px");t.style.setProperty("--my",e.clientY-r.top+"px")}));
-/* toast */
-const toast=$("toast");let tt;
-function say(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove("show"),1800)}
+// header, menu, active nav
+const hdr=document.getElementById('hdr'),mb=document.getElementById('menuBtn'),mm=document.getElementById('mmenu');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20),{passive:true});
+function setMenu(o){mm.classList.toggle('show',o);mb.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+mb.onclick=()=>setMenu(!mm.classList.contains('show'));
+mm.querySelectorAll('a').forEach(a=>a.onclick=()=>setMenu(false));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+const links=[...document.querySelectorAll('#nav a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>so.observe(s));
 
-/* KMSAR approval flow */
-(()=>{const cells=[...$("k-pipe").children],labels=["Waiting for proposal","Waiting for dean","Waiting for OVPRI","Research registered"];let s=2;
- const draw=()=>{cells.forEach((c,i)=>c.className=i<s?"done":i===s?"now":"");if(s===3)cells[3].className="done";$("k-status").textContent=labels[s];$("k-btn").lastChild.textContent=s===3?"Start over":"Approve next step"};
- draw();$("k-btn").onclick=()=>{s=s===3?0:s+1;draw();if(s===3)say("Research registered")}})();
-/* GANAP slots */
-(()=>{let n=12;const cap=50;const draw=()=>{$("g-slots").textContent=n;$("g-bar").style.width=((cap-n)/cap*100)+"%";$("g-btn").lastChild.textContent=n===0?"Reset event":"Register a resident"};
- $("g-btn").onclick=()=>{if(n===0){n=12}else{n--;say(n===0?"Event is now full":"Registered. "+n+" slots left")}draw()};draw()})();
-/* FAST Track status */
-(()=>{const items=[...$("f-tl").children],names=["Submitted","Clearance","Processing","Ready"];let s=2;
- const draw=()=>{items.forEach((d,i)=>d.className=i<s?"done":i===s?"now":"");if(s===3)items[3].className="done";const b=$("f-badge");b.textContent=names[s];
-  const ok=s===3;b.style.background=ok?"var(--ok-soft)":"var(--accent-soft)";b.style.color=ok?"color-mix(in srgb,var(--ok) 75%,var(--ink))":"color-mix(in srgb,var(--accent) 80%,var(--ink))";$("f-btn").lastChild.textContent=ok?"Start over":"Move to next status"};
- draw();$("f-btn").onclick=()=>{s=s===3?0:s+1;draw();if(s===3)say("Document ready for release")}})();
-/* RentTrack payments */
-(()=>{const due=[...$("r-rows").querySelectorAll("em.o")];let paid=14,d=4,i=0;
- $("r-btn").onclick=()=>{if(i>=due.length){due.forEach((e,k)=>{e.className="o";e.textContent=k?"Due Oct 8":"Due Oct 5"});paid=14;d=4;i=0}else{due[i].className="g";due[i].textContent="Paid";i++;paid++;d--;say("Payment recorded")}
-  $("r-paid").textContent=paid;$("r-due").textContent=d;$("r-btn").lastChild.textContent=i>=due.length?"Reset":"Record a payment"}})();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
+addEventListener('beforeprint',()=>{document.getElementById('typed').textContent='Full-stack developer'});
 
-/* copy */
-document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);say("Copied "+b.dataset.copy)}catch(e){say("Couldn’t copy. Select the text instead.")}}));
-/* print: open all case studies for the PDF */
-let wasOpen=[];
-addEventListener("beforeprint",()=>{wasOpen=[...document.querySelectorAll("details.case")].map(d=>d.open);document.querySelectorAll("details.case").forEach(d=>d.open=true)});
-addEventListener("afterprint",()=>{document.querySelectorAll("details.case").forEach((d,i)=>d.open=wasOpen[i])});
-document.querySelectorAll("[data-print]").forEach(b=>b.addEventListener("click",()=>window.print()));
-/* active nav */
-const links=[...document.querySelectorAll(".bar nav a")];
-const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
-document.querySelectorAll("main section").forEach(s=>so.observe(s));
-/* theme */
-const root=document.documentElement,tb=$("theme");
-try{const s=localStorage.getItem("yc-theme");if(s)root.dataset.theme=s}catch(e){}
-tb.addEventListener("click",()=>{const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("yc-theme",root.dataset.theme)}catch(e){}});
+// copy buttons
+document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)}catch(e){}});
+
+// galleries + lightbox
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+document.querySelectorAll('[data-gallery]').forEach(g=>{
+  const main=g.querySelector('.shot img'),cap=g.querySelector('.caption');if(!main)return;
+  g.querySelectorAll('.thumbs button').forEach(t=>t.onclick=()=>{
+    g.querySelectorAll('.thumbs button').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');
+    main.src=t.dataset.src;main.alt=t.dataset.alt;cap.textContent=t.dataset.cap});
+  g.querySelector('.shot').onclick=()=>{lbImg.src=main.src;lbImg.alt=main.alt;lbCap.textContent=cap.textContent;lb.showModal()}});
+document.getElementById('lbClose').onclick=()=>lb.close();
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+
+// typing role
+(()=>{const w=['Full-stack developer','Software QA enthusiast','AI and prompt engineering','Student athlete realtor'];let i=0,j=w[0].length,del=true;const el=document.getElementById('typed');
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ setTimeout(function tick(){const s=w[i];el.textContent=s.slice(0,j);if(!del&&j===s.length){del=true;return setTimeout(tick,1900)}
+  if(del&&j===0){del=false;i=(i+1)%w.length}j+=del?-1:1;setTimeout(tick,del?32:68)},1900)})();
+
+// cursor dot + tap ripple
+const cur=document.querySelector('.cursor');let cx=0,cy=0,tx=0,ty=0;
+addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY;cur.style.opacity=1},{passive:true});
+document.addEventListener('mouseleave',()=>cur.style.opacity=0);
+(function loop(){cx+=(tx-cx)*.35;cy+=(ty-cy)*.35;cur.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,summary').forEach(el=>{el.addEventListener('pointerenter',()=>cur.classList.add('big'));el.addEventListener('pointerleave',()=>cur.classList.remove('big'))});
+addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')return;for(const c of['','r2']){const r=document.createElement('span');r.className='ripple '+c;r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),900)}},{passive:true});
+
+// fluid ink cursor (light theme: soft blue ink on paper)
+(()=>{
+  if(matchMedia('(hover:none)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const cv=document.getElementById('fluid');
+  const gl=cv.getContext('webgl2',{alpha:true,premultipliedAlpha:true,antialias:false,depth:false,stencil:false});
+  if(!gl||!gl.getExtension('EXT_color_buffer_float'))return;
+  const CFG={SIM:128,DYE:768,VEL_DISS:.6,DYE_DISS:2.2,PRESSURE:.8,ITER:20,CURL:20,RADIUS:.2,FORCE:5000};
+  const VS=`#version 300 es
+precision highp float;in vec2 aPosition;out vec2 vUv,vL,vR,vT,vB;uniform vec2 texelSize;
+void main(){vUv=aPosition*.5+.5;vL=vUv-vec2(texelSize.x,0.);vR=vUv+vec2(texelSize.x,0.);vT=vUv+vec2(0.,texelSize.y);vB=vUv-vec2(0.,texelSize.y);gl_Position=vec4(aPosition,0.,1.);}`;
+  const H=`#version 300 es
+precision highp float;precision highp sampler2D;in vec2 vUv,vL,vR,vT,vB;out vec4 o;`;
+  const FS={
+    clear:H+`uniform sampler2D uTexture;uniform float value;void main(){o=value*texture(uTexture,vUv);}`,
+    splat:H+`uniform sampler2D uTarget;uniform float aspectRatio,radius;uniform vec3 color;uniform vec2 point;void main(){vec2 p=vUv-point;p.x*=aspectRatio;o=vec4(texture(uTarget,vUv).xyz+exp(-dot(p,p)/radius)*color,1.);}`,
+    advect:H+`uniform sampler2D uVelocity,uSource;uniform vec2 texelSize;uniform float dt,dissipation;void main(){vec2 c=vUv-dt*texture(uVelocity,vUv).xy*texelSize;o=texture(uSource,c)/(1.+dissipation*dt);}`,
+    divergence:H+`uniform sampler2D uVelocity;void main(){float L=texture(uVelocity,vL).x,R=texture(uVelocity,vR).x,T=texture(uVelocity,vT).y,B=texture(uVelocity,vB).y;vec2 C=texture(uVelocity,vUv).xy;if(vL.x<0.)L=-C.x;if(vR.x>1.)R=-C.x;if(vT.y>1.)T=-C.y;if(vB.y<0.)B=-C.y;o=vec4(.5*(R-L+T-B),0.,0.,1.);}`,
+    curl:H+`uniform sampler2D uVelocity;void main(){float L=texture(uVelocity,vL).y,R=texture(uVelocity,vR).y,T=texture(uVelocity,vT).x,B=texture(uVelocity,vB).x;o=vec4(.5*(R-L-T+B),0.,0.,1.);}`,
+    vorticity:H+`uniform sampler2D uVelocity,uCurl;uniform float curl,dt;void main(){float L=texture(uCurl,vL).x,R=texture(uCurl,vR).x,T=texture(uCurl,vT).x,B=texture(uCurl,vB).x,C=texture(uCurl,vUv).x;vec2 f=.5*vec2(abs(T)-abs(B),abs(R)-abs(L));f/=length(f)+1e-4;f*=curl*C;f.y*=-1.;o=vec4(clamp(texture(uVelocity,vUv).xy+f*dt,-1000.,1000.),0.,1.);}`,
+    pressure:H+`uniform sampler2D uPressure,uDivergence;void main(){float L=texture(uPressure,vL).x,R=texture(uPressure,vR).x,T=texture(uPressure,vT).x,B=texture(uPressure,vB).x;o=vec4((L+R+B+T-texture(uDivergence,vUv).x)*.25,0.,0.,1.);}`,
+    gradient:H+`uniform sampler2D uPressure,uVelocity;void main(){float L=texture(uPressure,vL).x,R=texture(uPressure,vR).x,T=texture(uPressure,vT).x,B=texture(uPressure,vB).x;o=vec4(texture(uVelocity,vUv).xy-vec2(R-L,T-B),0.,1.);}`,
+    // dye.r = density, dye.g = hue mix (0 ink navy -> 1 accent blue)
+    display:H+`uniform sampler2D uTexture;void main(){vec3 d=texture(uTexture,vUv).rgb;float a=clamp(d.r/(1.+d.r),0.,.42);float m=clamp(d.g/max(d.r,1e-4),0.,1.);vec3 ink=mix(vec3(.16,.22,.42),vec3(.33,.47,.95),m);o=vec4(ink*a,a);}`
+  };
+  function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);if(!gl.getShaderParameter(x,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(x);return x}
+  const P={};
+  try{const vs=sh(gl.VERTEX_SHADER,VS);for(const k in FS){const p=gl.createProgram();gl.attachShader(p,vs);gl.attachShader(p,sh(gl.FRAGMENT_SHADER,FS[k]));gl.bindAttribLocation(p,0,'aPosition');gl.linkProgram(p);
+    const u={};const n=gl.getProgramParameter(p,gl.ACTIVE_UNIFORMS);for(let i=0;i<n;i++){const nm=gl.getActiveUniform(p,i).name;u[nm]=gl.getUniformLocation(p,nm)}P[k]={p,u}}}catch(e){return}
+  gl.bindBuffer(gl.ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,-1,1,1,1,1,-1]),gl.STATIC_DRAW);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,gl.createBuffer());gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array([0,1,2,0,2,3]),gl.STATIC_DRAW);
+  gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);gl.enableVertexAttribArray(0);
+  function fbo(w,h){gl.activeTexture(gl.TEXTURE0);const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);
+    for(const [k,v] of [[gl.TEXTURE_MIN_FILTER,gl.LINEAR],[gl.TEXTURE_MAG_FILTER,gl.LINEAR],[gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE],[gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE]])gl.texParameteri(gl.TEXTURE_2D,k,v);
+    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA16F,w,h,0,gl.RGBA,gl.HALF_FLOAT,null);
+    const f=gl.createFramebuffer();gl.bindFramebuffer(gl.FRAMEBUFFER,f);gl.framebufferTexture2D(gl.FRAMEBUFFER,gl.COLOR_ATTACHMENT0,gl.TEXTURE_2D,t,0);
+    gl.viewport(0,0,w,h);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
+    return{f,w,h,tx:1/w,ty:1/h,attach(i){gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(gl.TEXTURE_2D,t);return i}}}
+  function dbl(w,h){let a=fbo(w,h),b=fbo(w,h);return{w,h,tx:a.tx,ty:a.ty,get read(){return a},get write(){return b},swap(){[a,b]=[b,a]}}}
+  function res(r){let ar=gl.drawingBufferWidth/gl.drawingBufferHeight;if(ar<1)ar=1/ar;const mn=Math.round(r),mx=Math.round(r*ar);return gl.drawingBufferWidth>gl.drawingBufferHeight?[mx,mn]:[mn,mx]}
+  let vel,dye,div,crl,prs;
+  function size(){const d=Math.min(devicePixelRatio||1,1.5);cv.width=innerWidth*d;cv.height=innerHeight*d;const [sw,shh]=res(CFG.SIM),[dw,dh]=res(CFG.DYE);vel=dbl(sw,shh);dye=dbl(dw,dh);div=fbo(sw,shh);crl=fbo(sw,shh);prs=dbl(sw,shh)}
+  size();addEventListener('resize',size);
+  function use(k){gl.useProgram(P[k].p);return P[k].u}
+  function blit(t){if(t){gl.viewport(0,0,t.w,t.h);gl.bindFramebuffer(gl.FRAMEBUFFER,t.f)}else{gl.viewport(0,0,gl.drawingBufferWidth,gl.drawingBufferHeight);gl.bindFramebuffer(gl.FRAMEBUFFER,null)}gl.drawElements(gl.TRIANGLES,6,gl.UNSIGNED_SHORT,0)}
+  function splat(x,y,dx,dy,c){const ar=cv.width/cv.height;const u=use('splat');
+    gl.uniform1i(u.uTarget,vel.read.attach(0));gl.uniform1f(u.aspectRatio,ar);gl.uniform2f(u.point,x,y);gl.uniform3f(u.color,dx,dy,0);gl.uniform1f(u.radius,CFG.RADIUS/100*(ar>1?ar:1));blit(vel.write);vel.swap();
+    gl.uniform1i(u.uTarget,dye.read.attach(0));gl.uniform3f(u.color,c[0],c[1],0);blit(dye.write);dye.swap()}
+  function step(dt){gl.disable(gl.BLEND);let u;
+    u=use('curl');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uVelocity,vel.read.attach(0));blit(crl);
+    u=use('vorticity');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uVelocity,vel.read.attach(0));gl.uniform1i(u.uCurl,crl.attach(1));gl.uniform1f(u.curl,CFG.CURL);gl.uniform1f(u.dt,dt);blit(vel.write);vel.swap();
+    u=use('divergence');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uVelocity,vel.read.attach(0));blit(div);
+    u=use('clear');gl.uniform1i(u.uTexture,prs.read.attach(0));gl.uniform1f(u.value,CFG.PRESSURE);blit(prs.write);prs.swap();
+    u=use('pressure');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uDivergence,div.attach(0));for(let i=0;i<CFG.ITER;i++){gl.uniform1i(u.uPressure,prs.read.attach(1));blit(prs.write);prs.swap()}
+    u=use('gradient');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uPressure,prs.read.attach(0));gl.uniform1i(u.uVelocity,vel.read.attach(1));blit(vel.write);vel.swap();
+    u=use('advect');gl.uniform2f(u.texelSize,vel.tx,vel.ty);gl.uniform1i(u.uVelocity,vel.read.attach(0));gl.uniform1i(u.uSource,vel.read.attach(0));gl.uniform1f(u.dt,dt);gl.uniform1f(u.dissipation,CFG.VEL_DISS);blit(vel.write);vel.swap();
+    gl.uniform1i(u.uVelocity,vel.read.attach(0));gl.uniform1i(u.uSource,dye.read.attach(1));gl.uniform1f(u.dissipation,CFG.DYE_DISS);blit(dye.write);dye.swap()}
+  function render(){gl.enable(gl.BLEND);gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);const u=use('display');gl.uniform2f(u.texelSize,0,0);gl.uniform1i(u.uTexture,dye.read.attach(0));blit(null)}
+  let t=0;const dens=.11;function color(){t+=.015;const m=.5+.5*Math.sin(t);return[dens,dens*m]}
+  let px=null,py=null,moved=false,mx=0,my=0,dx=0,dy=0;
+  addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const x=e.clientX/innerWidth,y=1-e.clientY/innerHeight,ar=innerWidth/innerHeight;
+    if(px!==null){dx=(x-px)*CFG.FORCE*(ar<1?ar:1);dy=(y-py)*CFG.FORCE*(ar>1?1/ar:1);moved=true}px=mx=x;py=my=y},{passive:true});
+  addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;const x=e.clientX/innerWidth,y=1-e.clientY/innerHeight;for(let i=0;i<6;i++){const a=i/6*Math.PI*2,c=color();splat(x,y,Math.cos(a)*650,Math.sin(a)*650,[c[0]*1.8,c[1]*1.8])}});
+  let last=performance.now();
+  (function frame(now){const dt=Math.min((now-last)/1000,.016667);last=now;if(moved){splat(mx,my,dx,dy,color());moved=false}step(dt);render();requestAnimationFrame(frame)})(last);
+})();
 </script>
 </body>
 </html>
